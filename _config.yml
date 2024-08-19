@@ -28,7 +28,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Our predictions on how disease progression can be inhibited, or
   what the gene expression levels will be under specific environmental/drug treatments
   when certain genes are knocked down, targeting researchers and pharmaceutical companies.
-default_lang: ko
+default_lang: en
 languages:
   - en
   - ko  
