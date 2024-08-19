@@ -1,0 +1,96 @@
+title: "실리코팜 주식회사"
+toggle: "ENG"
+toggle_href: "/index.en.html"
+
+hero:
+  title: "생명과학과 인공지능을 연결하다"
+  subtitle: "실리코팜의 오믹스 생성 인공지능 솔루션 KnockG<sup>TM</sup>은 저비용 고효율로 가상의 실험결과 값을 생성하여 기초, 의학 및 제약 분야 연구를 가속화 합니다."
+  button_text: "무료 버전 바로 사용해보기"
+
+features:
+  section_title: "유용한 기능들"
+  main_title: "실험 없이 결과 오믹스 데이터를 생성"
+  main_description: "웹 어플리케이션을 통해 생성 인공지능의 학습 및 활용이 가능하여 손쉽게, 즉각적으로 연구과정을 혁신할 수 있습니다."
+  feature_1_title: "시계열 데이터 생성"
+  feature_1_description: "t<sub>0</sub>, t<sub>5</sub> 시점의 학습 데이터로 t<sub>1</sub>, t<sub>2</sub>, t<sub>3</sub>의 중간 시점의 오믹스 데이터나 t<sub>10</sub>, t<sub>15</sub> 등의 미래 시점의 오믹스 데이터를 생성합니다."
+  feature_2_title: "타겟 녹다운/활성화 데이터 생성"
+  feature_2_description: "특정 유전자/단백질 타겟의 녹다운/활성화 시의 데이터를 생성, 다양한 분석에 활용합니다."
+  feature_3_title: "신규 타겟 및 후보물질 탐색"
+  feature_3_description: "생성 데이터의 비교/분석으로 질환 및 생명현상의 신규 타겟을 탐색, 문헌/약물/특허 정보가 함께 제공됩니다."  
+
+pricing:
+  section_title: "가격 정책"
+  main_title: "즉각 사용 및 체험이 가능한 가격 정책"
+  main_description: "무료 버전인 lite.knockG를 포함해 KnockG의 경우에도 연구자가 선 분석 진행 후 비 식별화된 결과물에 대해 데이터 기반 유효성 판단 (pseudo-blotting 등) 후 유료 버전으로 전환 가능합니다."
+  start_now: "바로 시작하기"
+  support: "문의 및 지원"
+  support_via: "via Email"
+  support_via_full: "Email, Chat & Offline Meeting"
+  avg_time: "AVG. Time: 48h"
+  request_quote: "견적 산출하기"
+  plans:
+    basic:
+      title: "Lite.KnockG"
+      price: "무료"
+      subtitle: "회원가입 후"
+      description: "무료 사용 가능"
+      features: "공개된 생성 모델 활용|타겟 녹다운 시뮬레이션|pseudo-blotting을 통한 마커 발현량 예측"
+    favourite:
+      title: "KnockG"
+      price: "무료"
+      subtitle: "회원가입 후"
+      description: "무료 체험 가능"
+      features: "Lite.KnockG 포함|더 많은 생성모델의 활용 및 학습|타겟 스코어링, 문헌/약물 정보 조회|비식별화된 분석 결과 확인 및 검토"
+    paid:
+      title: "KnockG (유료)"
+      prefix: "최대"
+      price: "10백만원"
+      subtitle: "인공지능 모델 별"
+      description: "결과 검토 후 결제가능"
+      features: "KnockG 전체 기능 활용 / 비식별화 해제|해당 생성 인공지능 모델 무제한 사용|다중 타겟 녹다운 시뮬레이션|특허 정보 조회|연구 우선권 보호 (타겟 비식별화)|요청에 따른 추가 분석 및 보고서 제공"
+
+fun_facts:
+  models_trained: "186+"
+  models_trained_label: "학습 완료된 모델"
+  diseases_applied: "68+"
+  diseases_applied_label: "적용질환/생명현상 수"
+  screening_count: "971+"
+  screening_count_label: "스크리닝 횟수"
+  poc_cases: "11+"
+  poc_cases_label: "주요 POC 사례"      
+
+faq:
+  section_title: "FAQ"
+  main_title: "자주 묻는 질문들"
+  contact_info: "이외의 문의 및 요청은 메일(contact@silicopharm.com)을 통해 가능합니다."
+  items:
+    - id: "qna_0"
+      question: "얼마나 정확한가요?"
+      answer: "다양한 통계적 방법론을 통해 솔루션의 유의성을 검증하고 있으며, 별도 요청 시 관련 문헌과 POC 결과값을 송부드리고 있습니다."
+    - id: "qna_1"
+      question: "솔루션을 사용하려면 어떻게 해야 하나요?"
+      answer: "lite.knockg.com 혹은 www.knockg.com에 접속 후 회원가입 하면 바로 사용할 수 있습니다!"
+    - id: "qna_2"
+      question: "KnockG와 KnockG(PAID)의 차이는 무엇인가요?"
+      answer: "결제를 하지 않은 경우에도 모든 기능을 사용할 수 있으나 타겟들은 비식별화 처리 된 상태로 나타납니다. 비식별화 처리 된 상태여도 주요 마커 발현량의 변화와 타겟의 발현량 변화는 확인할 수 있어, 실제 결제 전 도출 결과의 정합성을 파악할 수 있습니다. 비식별화 처리는 결재 후 해제 가능합니다."
+    - id: "qna_3"
+      question: "어떤 데이터를 사용해야 하나요?"
+      answer: "Normalized 된 발현량 데이터면 학습이 가능하며, 현재 모델은 단일세포 전사체에서 높은 정확성을 보이고 있습니다."
+    - id: "qna_4"
+      question: "결제 방법 및 기간은 어떻게 되나요?"
+      answer: "질환 별 및 cell-type 별로 학습되는 인공지능 모델 단위로 결제할 수 있으며, 결제 완료된 모델에서의 분석에는 추가 비용을 책정하고 있지 않습니다."
+    - id: "qna_5"
+      question: "솔루션을 사용하면 어떤 이점이 있나요?"
+      answer: "솔루션을 활용하여 30분 내에 신규 타겟을 도출하는 것 외에도, 특정한 상황에서의 발현량 변화 값을 실험 없이 예측할 수 있습니다."  
+
+cta:
+  title: "시작할 준비가 되었나요?"
+  description: "회원가입 후 바로 사용해 보기"
+  button_1: "Lite.knockG<sup>TM</sup>"
+  button_2: "knockG<sup>TM</sup>"      
+
+contact_us:
+  section_title: "문의하기"
+  main_title_bold: "함께"
+  main_title: "하실 분들"
+  description: "제품에서 공동연구 및 채용 관련 문의까지 오른쪽 하단 채널톡으로 언제든지 문의부탁드립니다."  

@@ -12,11 +12,11 @@
         src="{{ '/assets/img/front-pages/icons/section-tilte-icon.png' | relative_url }}"
         alt="section title icon"
         class="me-3" />
-      <span class="text-uppercase">FAQ</span>
+      <span class="text-uppercase">{{ site.data[page.lang].faq.section_title }}</span>
     </h6>
-    <h5 class="text-center mb-2">Frequently asked <span class="display-5 fs-4 fw-bold">questions</span></h5>
+    <h5 class="text-center mb-2">{{ site.data[page.lang].faq.main_title }}</h5>
     <p class="text-center fw-medium mb-4 mb-md-12 pb-4">
-      Browse through these FAQs to find answers to commonly asked questions.
+      {{ site.data[page.lang].faq.contact_info }}
     </p>
     <div class="row gy-5">
       <div class="col-lg-5">
@@ -29,125 +29,34 @@
       </div>
       <div class="col-lg-7">
         <div class="accordion" id="accordionFront">
-          <!-- FAQ Item 1 -->
+
+          {% assign faq_items = site.data[page.lang].faq.items %}
+          
+          {% for item in faq_items %}
           <div class="accordion-item">
-            <h2 class="accordion-header" id="head-One">
+            <h2 class="accordion-header" id="head-{{ item.id }}">
               <button
                 type="button"
                 class="accordion-button collapsed"
                 data-bs-toggle="collapse"
-                data-bs-target="#accordionOne"
-                aria-expanded="true"
-                aria-controls="accordionOne">
-                Do you charge for each upgrade?
-              </button>
-            </h2>
-            <div
-              id="accordionOne"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionFront"
-              aria-labelledby="head-One">
-              <div class="accordion-body">
-                Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing marzipan gummi bears macaroon dragée danish caramels powder.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 2 -->
-          <div class="accordion-item previous-active">
-            <h2 class="accordion-header" id="head-Two">
-              <button
-                type="button"
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#accordionTwo"
+                data-bs-target="#{{ item.id }}"
                 aria-expanded="false"
-                aria-controls="accordionTwo">
-                Do I need to purchase a license for each website?
+                aria-controls="{{ item.id }}">
+                {{ item.question }}
               </button>
             </h2>
             <div
-              id="accordionTwo"
+              id="{{ item.id }}"
               class="accordion-collapse collapse"
-              aria-labelledby="head-Two"
+              aria-labelledby="head-{{ item.id }}"
               data-bs-parent="#accordionFront">
               <div class="accordion-body">
-                Dessert ice cream donut oat cake jelly-o pie sugar plum cheesecake. Bear claw dragée oat cake dragée ice cream halvah tootsie roll.
+                {{ item.answer }}
               </div>
             </div>
           </div>
+          {% endfor %}
 
-          <!-- FAQ Item 3 -->
-          <div class="accordion-item active">
-            <h2 class="accordion-header" id="head-Three">
-              <button
-                type="button"
-                class="accordion-button"
-                data-bs-toggle="collapse"
-                data-bs-target="#accordionThree"
-                aria-expanded="true"
-                aria-controls="accordionThree">
-                What is a regular license?
-              </button>
-            </h2>
-            <div
-              id="accordionThree"
-              class="accordion-collapse collapse show"
-              aria-labelledby="head-Three"
-              data-bs-parent="#accordionFront">
-              <div class="accordion-body">
-                Regular license can be used for end products that do not charge users for access or service. Single regular license can be used for a single end product.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 4 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="head-Four">
-              <button
-                type="button"
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#accordionFour"
-                aria-expanded="false"
-                aria-controls="accordionFour">
-                What is an extended license?
-              </button>
-            </h2>
-            <div
-              id="accordionFour"
-              class="accordion-collapse collapse"
-              aria-labelledby="head-Four"
-              data-bs-parent="#accordionFront">
-              <div class="accordion-body">
-                An extended license allows for an end product that charges users for access. It can be used for multiple domains with the same end product.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 5 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="head-Five">
-              <button
-                type="button"
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#accordionFive"
-                aria-expanded="false"
-                aria-controls="accordionFive">
-                Which license is applicable for a SaaS application?
-              </button>
-            </h2>
-            <div
-              id="accordionFive"
-              class="accordion-collapse collapse"
-              aria-labelledby="head-Five"
-              data-bs-parent="#accordionFront">
-              <div class="accordion-body">
-                The extended license is applicable for SaaS applications as it allows you to charge users for access to the application.
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,97 @@
+title: "SilicoPharm, Inc"
+toggle: "KOR"
+toggle_href: "/index.ko.html"
+
+hero:
+  title: "Bridging Life Sciences and AI"
+  subtitle: "KnockG<sup>TM</sup>, SilicoPharm's AI Omics Generation Solution, accelerates research in basic, medical, and pharmaceutical fields by generating virtual experimental results at low cost and high efficiency."
+  button_text: "Try the free version now"
+
+features:
+  section_title: "Useful features"
+  main_title: "Generate Omics Data without Experiments"
+  main_description: "Through the web application, AI learning and utilization can be performed easily and immediately, revolutionizing the research process."
+  feature_1_title: "Generate Time-Series Data"
+  feature_1_description: "Generate omics data at intermediate time points (t<sub>1</sub>, t<sub>2</sub>, t<sub>3</sub>) based on learning data from t<sub>0</sub> and t<sub>5</sub>, as well as future time points (t<sub>10</sub>, t<sub>15</sub>)."
+  feature_2_title: "Generate Knockdown/Activation Data"
+  feature_2_description: "Generate data for knockdown/activation of specific gene/protein targets and utilize it for various analyses."
+  feature_3_title: "Explore New Targets and Candidates"
+  feature_3_description: "Compare and analyze generated data to explore new disease and life phenomenon targets, with literature, drug, and patent information provided."  
+
+pricing:
+  section_title: "Pricing Plans"
+  main_title: "Pricing policies available for immediate use and trial"
+  main_description: "Including the free version of lite.knockG, even in the case of KnockG, researchers can conduct preliminary analysis</br> and decide on the paid version after verifying the anonymized results with data-driven validation (e.g., pseudo-blotting)."
+  start_now: "Start Now"
+  support: "Support & Inquiries"
+  support_via: "via Email"
+  support_via_full: "Email, Chat & Offline Meeting"
+  avg_time: "AVG. Time: 48h"
+  request_quote: "Request a Quote"
+  plans:
+    basic:
+      title: "Lite.KnockG"
+      price: "FREE"
+      subtitle: "After Registration"
+      description: "Free to use"
+      features: "Use of Public Generatve Models|Knock-down Simulation|Marker lv Pred (Pseudo-Blotting)"
+    favourite:
+      title: "KnockG"
+      price: "FREE"
+      subtitle: "After Registration"
+      description: "Free Trial Available"
+      features: "Includes Lite.KnockG|More Generatve Models & Learning|Target Scoring, Ref/Drug Info Lookup|Review of Anonymized Results"
+    paid:
+      title: "KnockG (PAID)"
+      prefix: "~$"
+      price: "1,000"
+      subtitle: "Per AI Model"
+      description: "Payment available after review"
+      features: "Full Feature Usage / De-Anonymization|Unlimited AI Model Usage|Multiple Knockdown Simulations|Patent Information Lookup|Target Anonymization Protection|Additional Analysis/Reports on Request"
+
+
+fun_facts:
+  models_trained: "186+"
+  models_trained_label: "Models Trained"
+  diseases_applied: "68+"
+  diseases_applied_label: "Diseases/Perturbation Applied"
+  screening_count: "971+"
+  screening_count_label: "Screenings Conducted"
+  poc_cases: "11+"
+  poc_cases_label: "Major POC Cases"
+
+faq:
+  section_title: "FAQ"
+  main_title: "Frequently Asked Questions"
+  contact_info: "For any other inquiries and requests, feel free to reach us at contact@silicopharm.com."
+  items:
+    - id: "qna_0"
+      question: "How accurate is it?"
+      answer: "The significance of the solution is validated through various statistical methodologies, and relevant literature and POC results can be sent upon request."
+    - id: "qna_1"
+      question: "How do I start using the solution?"
+      answer: "You can start using it by registering on lite.knockg.com or www.knockg.com."
+    - id: "qna_2"
+      question: "What's the difference between KnockG and KnockG (PAID)?"
+      answer: "Even without payment, you can use all the features, but targets are anonymized. However, you can still observe changes in key marker expression and target expression to assess result accuracy before payment. Anonymization can be lifted after payment."
+    - id: "qna_3"
+      question: "What data should I use?"
+      answer: "The solution can learn from normalized expression data and shows high accuracy in single-cell transcriptomics. POCs have shown that significant results can be obtained even with tissue-level transcriptomics and proteomics data."
+    - id: "qna_4"
+      question: "What is the payment method and duration?"
+      answer: "You can pay per AI model trained by disease or cell type. No extra cost is charged for analyzing paid models (e.g., knockdown simulation, pseudo-blotting, etc.). Quotes are offered based on the scale of the model and additional requests."
+    - id: "qna_5"
+      question: "What are the advantages of using the solution?"
+      answer: "Besides deriving new targets in 30 minutes (with model training taking up to 2 weeks), it predicts expression changes in specific scenarios in a form equivalent to experimental results without actual experiments."
+
+cta:
+  title: "Are you ready to get started?"
+  description: "Sign up now and start using it right away."
+  button_1: "Lite.knockG<sup>TM</sup>"
+  button_2: "knockG<sup>TM</sup>"      
+
+contact_us:
+  section_title: "Contact Us"
+  main_title_bold: "Join "
+  main_title: "Us"
+  description: "From product inquiries to collaborative research and recruitment, feel free to reach us anytime through the Channel Talk icon in the bottom right corner."

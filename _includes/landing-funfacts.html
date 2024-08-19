@@ -1,34 +1,34 @@
 <section id="landingFunFacts" class="section-py landing-fun-facts py-12 my-4 bg-body-light">
-    <div class="container">
-      <div class="row gx-0 gy-6 gx-sm-6">
-        <div class="col-md-3 col-sm-6 text-center">
-          <span class="badge rounded-pill bg-label-hover-primary fun-facts-icon mb-6 p-5"
-            ><i class="tf-icons ri-layout-line ri-42px"></i
-          ></span>
-          <h2 class="fw-bold mb-0 fun-facts-text">137+</h2>
-          <h6 class="mb-0 text-body">Completed Sites</h6>
-        </div>
-        <div class="col-md-3 col-sm-6 text-center">
-          <span class="badge rounded-pill bg-label-hover-success fun-facts-icon mb-6 p-5"
-            ><i class="tf-icons ri-time-line ri-42px"></i
-          ></span>
-          <h2 class="fw-bold mb-0 fun-facts-text">1,100+</h2>
-          <h6 class="mb-0 text-body">Working Hours</h6>
-        </div>
-        <div class="col-md-3 col-sm-6 text-center">
-          <span class="badge rounded-pill bg-label-hover-warning fun-facts-icon mb-6 p-5"
-            ><i class="tf-icons ri-user-smile-line ri-42px"></i
-          ></span>
-          <h2 class="fw-bold mb-0 fun-facts-text">137+</h2>
-          <h6 class="mb-0 text-body">Happy Customers</h6>
-        </div>
-        <div class="col-md-3 col-sm-6 text-center">
-          <span class="badge rounded-pill bg-label-hover-info fun-facts-icon mb-6 p-5"
-            ><i class="tf-icons ri-award-line ri-42px"></i
-          ></span>
-          <h2 class="fw-bold mb-0 fun-facts-text">23+</h2>
-          <h6 class="mb-0 text-body">Awards Winning</h6>
-        </div>
+  <div class="container">
+    <div class="row gx-0 gy-6 gx-sm-6">
+      <div class="col-md-3 col-sm-6 text-center">
+        <span class="badge rounded-pill bg-label-hover-primary fun-facts-icon mb-6 p-5">
+          <i class="tf-icons ri-layout-line ri-42px"></i>
+        </span>
+        <h2 class="fw-bold mb-0 fun-facts-text">{{ site.data[page.lang].fun_facts.models_trained }}</h2>
+        <h6 class="mb-0 text-body">{{ site.data[page.lang].fun_facts.models_trained_label }}</h6>
+      </div>
+      <div class="col-md-3 col-sm-6 text-center">
+        <span class="badge rounded-pill bg-label-hover-success fun-facts-icon mb-6 p-5">
+          <i class="tf-icons ri-hearts-fill ri-42px"></i>
+        </span>
+        <h2 class="fw-bold mb-0 fun-facts-text">{{ site.data[page.lang].fun_facts.diseases_applied }}</h2>
+        <h6 class="mb-0 text-body">{{ site.data[page.lang].fun_facts.diseases_applied_label }}</h6>
+      </div>
+      <div class="col-md-3 col-sm-6 text-center">
+        <span class="badge rounded-pill bg-label-hover-warning fun-facts-icon mb-6 p-5">
+          <i class="tf-icons ri-file-list-line ri-42px"></i>
+        </span>
+        <h2 class="fw-bold mb-0 fun-facts-text">{{ site.data[page.lang].fun_facts.screening_count }}</h2>
+        <h6 class="mb-0 text-body">{{ site.data[page.lang].fun_facts.screening_count_label }}</h6>
+      </div>
+      <div class="col-md-3 col-sm-6 text-center">
+        <span class="badge rounded-pill bg-label-hover-info fun-facts-icon mb-6 p-5">
+          <i class="tf-icons ri-award-line ri-42px"></i>
+        </span>
+        <h2 class="fw-bold mb-0 fun-facts-text">{{ site.data[page.lang].fun_facts.poc_cases }}</h2>
+        <h6 class="mb-0 text-body">{{ site.data[page.lang].fun_facts.poc_cases_label }}</h6>
       </div>
     </div>
-  </section>
+  </div>
+</section>
