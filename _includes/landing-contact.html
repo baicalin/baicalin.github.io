@@ -20,5 +20,50 @@
     <p class="text-center fw-medium mb-4 mb-md-12 pb-3">
       {{ site.data[page.lang].contact_us.description }}
     </p>
+    <div class="row gy-6">
+      <div class="col-lg-5">
+        <div class="card h-100">
+          <div class="bg-primary rounded-4 text-white card-body p-8">
+            <p class="fw-medium mb-1_5 tagline">Let’s contact with us</p>
+            <h4 class="text-white mb-5 title">Share your ideas or requirement with our experts.</h4>
+            <img src="../../assets/img/front-pages/landing-page/let’s-contact.png" alt="let’s contact" class="w-100 mb-5">
+            <p class="mb-0 description">
+              Looking for more customisation, more features, and more anything? Don’t worry, We’ve provide you
+              with an entire team of experienced professionals.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="mb-6">Quotation Request</h5>
+            <form action="https://formspree.io/f/xwpenyaz" method="POST">
+              <div class="row g-5">
+                <div class="col-md-6">
+                  <div class="form-floating form-floating-outline">
+                    <input type="text" class="form-control" id="basic-default-fullname" placeholder="" name="fullname">
+                    <label for="basic-default-fullname">Full name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating form-floating-outline">
+                    <input type="email" class="form-control" id="basic-default-email" placeholder="" name="email">
+                    <label for="basic-default-email">Email address</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating form-floating-outline">
+                    <textarea class="form-control h-px-250" placeholder="Message" aria-label="Message" id="basic-default-message" name="message"></textarea>
+                    <label for="basic-default-message">Message</label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary mt-5 waves-effect waves-light">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
