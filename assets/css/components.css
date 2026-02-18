@@ -1,0 +1,50 @@
+.mvp-page section.section-py {
+  padding-top: var(--mvp-space-section-y);
+  padding-bottom: var(--mvp-space-section-y);
+}
+
+.mvp-hero {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92)),
+    url("/assets/img/hero/hero-bg.svg") center/cover no-repeat;
+  border-bottom: 1px solid var(--mvp-color-border);
+}
+
+.mvp-hero .badge,
+.mvp-get-started-hero .badge {
+  background: rgba(23, 105, 224, 0.12) !important;
+  color: var(--mvp-color-primary);
+}
+
+.mvp-get-started-hero {
+  background: linear-gradient(180deg, #f9fbff, #f5f7fb);
+}
+
+.mvp-how-it-works .badge {
+  border-radius: 999px;
+}
+
+.docs-page .docs-sidebar a {
+  text-decoration: none;
+}
+
+.docs-page .docs-sidebar a.fw-semibold {
+  color: var(--mvp-color-primary) !important;
+}
+
+.mvp-examples-gallery .card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-top-left-radius: var(--mvp-radius-card);
+  border-top-right-radius: var(--mvp-radius-card);
+}
+
+.mvp-example-detail .lead {
+  max-width: 70ch;
+}
+
+@media (max-width: 767px) {
+  .mvp-page section.section-py {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}

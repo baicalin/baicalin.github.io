@@ -1,0 +1,44 @@
+{% assign ex = page.example_detail %}
+<section class="section-py mvp-example-detail">
+  <div class="container py-8">
+    <p class="text-uppercase text-primary fw-semibold mb-3">{{ ex.eyebrow }}</p>
+    <h1 class="fw-bold mb-4">{{ ex.title }}</h1>
+    <p class="lead mb-6">{{ ex.summary }}</p>
+
+    <div class="row g-6">
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-none border">
+          <div class="card-body p-6">
+            <h4 class="mb-3">Problem</h4>
+            <p class="mb-0">{{ ex.problem }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-none border">
+          <div class="card-body p-6">
+            <h4 class="mb-3">Approach</h4>
+            <ol class="mb-0 ps-3">
+              {% for step in ex.approach_steps %}
+                <li class="mb-2">{{ step }}</li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card shadow-none border">
+          <div class="card-body p-6">
+            <h4 class="mb-3">Outcome</h4>
+            <ul class="mb-4 ps-3">
+              {% for item in ex.outcomes %}
+                <li class="mb-2">{{ item }}</li>
+              {% endfor %}
+            </ul>
+            <a class="btn btn-primary" href="{{ ex.next_cta.url | relative_url }}">{{ ex.next_cta.label }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
