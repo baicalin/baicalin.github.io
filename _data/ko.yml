@@ -2,6 +2,12 @@ title: "실리코팜 주식회사"
 toggle: "ENG"
 toggle_href: "/index.en.html"
 
+nav:
+  home: "홈"
+  get_started: "시작하기"
+  docs: "문서"
+  examples: "예시"
+
 hero:
   title: "생명과학과 인공지능을 연결하다"
   subtitle: "실리코팜의 오믹스 생성 인공지능 솔루션 KnockG<sup>TM</sup>은 저비용 고효율로 가상의 실험결과 값을 생성하여 기초, 의학 및 제약 분야 연구를 가속화 합니다."

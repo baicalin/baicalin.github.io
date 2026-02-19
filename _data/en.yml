@@ -2,6 +2,12 @@ title: "SilicoPharm, Inc"
 toggle: "KOR"
 toggle_href: "/index.ko.html"
 
+nav:
+  home: "Home"
+  get_started: "Get Started"
+  docs: "Docs"
+  examples: "Examples"
+
 hero:
   title: "Bridging Life Sciences and AI"
   subtitle: "KnockG<sup>TM</sup>, SilicoPharm's AI Omics Generation Solution, accelerates research in basic, medical, and pharmaceutical fields by generating virtual experimental results at low cost and high efficiency."

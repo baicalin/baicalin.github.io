@@ -1,6 +1,7 @@
 ---
 layout: docs
 lang: en
+enable_channeltalk: true
 title: Docs
 description: KnockG documentation overview.
 ---
@@ -42,3 +43,7 @@ description: KnockG documentation overview.
     </a>
   </div>
 </div>
+
+{% for section in page.sections %}
+  {% include components/SectionRenderer.html section=section %}
+{% endfor %}
