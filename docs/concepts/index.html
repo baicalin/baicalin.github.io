@@ -1,0 +1,26 @@
+---
+layout: docs
+lang: en
+title: Concepts
+description: Core concepts for KnockG simulation outputs.
+---
+
+<h1 class="mb-3">Concepts</h1>
+<p class="mb-5">These concepts provide a shared vocabulary for design, execution, and review.</p>
+
+<h3 class="mb-3">Perturbation Mode</h3>
+<p class="mb-4">Defines how targets are modified in simulation. Typical modes are <code>knockdown</code> and <code>activation</code>.</p>
+
+<h3 class="mb-3">Condition</h3>
+<p class="mb-4">Represents experimental context (for example control vs treated) where target effects are estimated.</p>
+
+<h3 class="mb-3">Output Interpretation</h3>
+<ul class="mb-5">
+  <li>Prioritize candidates by effect magnitude and consistency.</li>
+  <li>Review marker-level behavior aligned to biological rationale.</li>
+  <li>Use exports for downstream ranking and experiment planning.</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  Next: define reproducible inputs in <a href="{{ '/docs/condition-spec/' | relative_url }}" class="alert-link">Condition Spec</a>.
+</div>

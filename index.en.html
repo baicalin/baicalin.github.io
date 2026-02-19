@@ -1,14 +1,66 @@
 ---
-layout: default
+layout: marketing
 lang: en
+title: Home
+description: Build gene perturbation hypotheses faster with KnockG.
+sections:
+  - type: HeroSection
+  - type: ValuePropsSection
+  - type: HowItWorksSection
+  - type: CollaborationSection
+hero:
+  eyebrow: "KnockG MVP"
+  title: "Simulate perturbation outcomes before wet-lab execution"
+  subtitle: "KnockG helps biology and drug discovery teams test hypotheses quickly by generating virtual omics outcomes from existing data."
+  primary_cta:
+    label: "Get Started"
+    url: "/get-started/"
+  secondary_cta:
+    label: "Read Docs"
+    url: "/docs/"
+  badges:
+    - "Web app and API workflow"
+    - "Designed for translational research"
+    - "From question to shortlist in one flow"
+  panel_heading: "What you can do on day one"
+  panel_points:
+    - "Load an existing dataset and select a perturbation scenario."
+    - "Generate virtual expression responses for candidate targets."
+    - "Export outputs for downstream prioritization and review."
+value_props:
+  heading: "Why teams use KnockG"
+  description: "The platform is structured for fast iteration from hypothesis to decision."
+  items:
+    - title: "Shorten early exploration cycles"
+      description: "Evaluate multiple target hypotheses before committing expensive experiment time."
+    - title: "Compare perturbation scenarios"
+      description: "Run side-by-side simulations for knockdown/activation conditions with consistent outputs."
+    - title: "Keep decisions traceable"
+      description: "Capture assumptions, generated results, and chosen candidates in a reproducible workflow."
+how_it_works:
+  heading: "How it works"
+  description: "A minimal three-step process for moving from source data to candidate ranking."
+  steps:
+    - title: "Prepare and configure"
+      description: "Choose a dataset, define baseline conditions, and select genes or proteins to perturb."
+    - title: "Generate and inspect"
+      description: "Run the model and inspect virtual omics outputs, marker-level changes, and confidence signals."
+    - title: "Prioritize and export"
+      description: "Rank candidates by effect and consistency, then export for team review or external analysis."
+collaboration:
+  heading: "Built for collaborative research programs"
+  description: "KnockG supports shared workflows between computational scientists, wet-lab teams, and external partners."
+  points:
+    - "Align teams on one simulation-ready problem statement."
+    - "Review target rationales with consistent model outputs."
+    - "Transition from in silico shortlist to experimental planning."
+  cta:
+    heading: "See practical scenarios"
+    description: "Review example use cases and expected outputs."
+    label: "Explore Examples"
+    url: "/examples/"
 ---
 
-{% include landing-hero.html %}
-{% include landing-features.html %}
-{% include landing-reviews.html %}
-{% include landing-team.html %}
-{% include landing-pricing.html %}
-{% include landing-funfacts.html %}
-{% include landing-faq.html %}
-{% include landing-CTA.html %}
-{% include landing-contact.html %}
+{% for section in page.sections %}
+  {% include components/SectionRenderer.html section=section %}
+{% endfor %}

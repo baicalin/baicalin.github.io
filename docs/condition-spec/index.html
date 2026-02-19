@@ -1,0 +1,29 @@
+---
+layout: docs
+lang: en
+title: Condition Spec
+description: Minimal condition specification for simulations.
+---
+
+<h1 class="mb-3">Condition Spec</h1>
+<p class="mb-5">A condition spec defines a simulation request in a stable, repeatable structure.</p>
+
+<h3 class="mb-3">Required Fields</h3>
+<ul class="mb-5">
+  <li><code>dataset_id</code>: identifier of prepared data.</li>
+  <li><code>mode</code>: perturbation mode such as <code>knockdown</code>.</li>
+  <li><code>targets</code>: list of genes or proteins to perturb.</li>
+  <li><code>condition</code>: contextual label for the scenario.</li>
+</ul>
+
+<h3 class="mb-3">Example Spec</h3>
+<pre><code>{
+  "dataset_id": "ds_example_001",
+  "mode": "knockdown",
+  "targets": ["GENE_A", "GENE_B"],
+  "condition": "treated"
+}</code></pre>
+
+<div class="alert alert-primary mt-5" role="alert">
+  Next: call the endpoint in <a href="{{ '/docs/api/' | relative_url }}" class="alert-link">API</a>.
+</div>

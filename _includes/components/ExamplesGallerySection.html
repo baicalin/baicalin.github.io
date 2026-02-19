@@ -1,0 +1,21 @@
+{% assign gallery = page.examples_gallery %}
+<section class="section-py mvp-examples-gallery">
+  <div class="container py-8">
+    <h1 class="fw-bold mb-3">{{ gallery.heading }}</h1>
+    <p class="mb-6">{{ gallery.description }}</p>
+    <div class="row g-6">
+      {% for item in gallery.items %}
+        <div class="col-md-6">
+          <div class="card h-100 shadow-none border">
+            <img src="{{ item.image | relative_url }}" class="card-img-top" alt="{{ item.title }}" />
+            <div class="card-body p-5">
+              <h4 class="mb-2">{{ item.title }}</h4>
+              <p class="mb-4">{{ item.description }}</p>
+              <a class="btn btn-outline-primary" href="{{ item.url | relative_url }}">{{ item.cta_label }}</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+body {
+  background: var(--mvp-color-bg);
+  color: var(--mvp-color-text);
+}
+
+.mvp-page h1,
+.mvp-page h2,
+.mvp-page h3,
+.mvp-page h4,
+.mvp-page h5 {
+  color: var(--mvp-color-text);
+  letter-spacing: -0.01em;
+}
+
+.mvp-page p,
+.mvp-page li {
+  color: var(--mvp-color-muted);
+}
+
+.mvp-page .card {
+  border-color: var(--mvp-color-border) !important;
+  border-radius: var(--mvp-radius-card);
+  box-shadow: var(--mvp-shadow-soft);
+  background: var(--mvp-color-surface);
+}
+
+.mvp-page .btn-primary {
+  background-color: var(--mvp-color-primary);
+  border-color: var(--mvp-color-primary);
+}
+
+.mvp-page .btn-primary:hover,
+.mvp-page .btn-primary:focus {
+  background-color: var(--mvp-color-primary-strong);
+  border-color: var(--mvp-color-primary-strong);
+}
+
+.mvp-page pre {
+  margin: 0;
+  background: var(--mvp-code-bg);
+  color: var(--mvp-code-text);
+  border-radius: var(--mvp-radius-card);
+  overflow-x: auto;
+}
+
+.mvp-page code {
+  color: inherit;
+}

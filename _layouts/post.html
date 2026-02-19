@@ -1,13 +1,10 @@
 ---
-layout: default
+layout: page
 ---
 
-<section class="section-py position-relative bg-body">
-    <div class="container-xxl flex-grow-1 container-p-y">
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
-
-        {{ content }}
-    </div>
-</section>
-
+<article class="mvp-post">
+  {% if page.date %}
+    <p class="text-uppercase text-primary fw-semibold mb-3">{{ page.date | date: "%B %-d, %Y" }}</p>
+  {% endif %}
+  {{ content }}
+</article>

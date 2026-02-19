@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% assign current_lang = page.lang | default: site.default_lang | default: "en" %}
+<html
+  lang="{{ current_lang }}"
+  class="light-style layout-navbar-fixed layout-wide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="{{ '/assets/' | relative_url }}"
+  data-template="front-pages"
+  data-style="light">
+  <head>
+    {% include head.html mvp=true %}
+  </head>
+  <body>
+    <script src="{{ '/assets/vendor/js/dropdown-hover.js' | relative_url }}"></script>
+    <script src="{{ '/assets/vendor/js/mega-dropdown.js' | relative_url }}"></script>
+
+    {% include ui/HeaderNav.html %}
+
+    <main class="mvp-page docs-page section-py">
+      <div class="container py-8">
+        <div class="row g-6">
+          <aside class="col-lg-3">
+            <nav class="card shadow-none border docs-sidebar">
+              <div class="card-body">
+                <h6 class="text-uppercase mb-4">Docs</h6>
+                <ul class="list-unstyled mb-0">
+                  {% for item in site.data.navigation.docs %}
+                    {% assign is_active = false %}
+                    {% if page.url == item.url %}
+                      {% assign is_active = true %}
+                    {% endif %}
+                    <li class="mb-3">
+                      <a class="text-body{% if is_active %} fw-semibold{% endif %}" href="{{ item.url | relative_url }}">
+                        {{ item.label }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </nav>
+          </aside>
+          <article class="col-lg-9">
+            {{ content }}
+          </article>
+        </div>
+      </div>
+    </main>
+
+    {% include ui/Footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{% assign gs = page.get_started %}
+<section class="section-py mvp-get-started-code bg-body">
+  <div class="container py-8">
+    <div class="row g-6 align-items-start">
+      <div class="col-lg-5">
+        <h2 class="fw-bold mb-3">{{ gs.code.heading }}</h2>
+        <p class="mb-4">{{ gs.code.description }}</p>
+        {% if gs.code.doc_link %}
+          <a class="btn btn-outline-primary" href="{{ gs.code.doc_link.url | relative_url }}">
+            {{ gs.code.doc_link.label }}
+          </a>
+        {% endif %}
+      </div>
+      <div class="col-lg-7">
+        <div class="card shadow-none border">
+          <div class="card-body p-0">
+            <pre class="mb-0 p-6"><code>{{ gs.code.snippet | escape }}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
