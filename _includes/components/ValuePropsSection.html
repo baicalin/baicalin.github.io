@@ -1,4 +1,6 @@
-{% assign value_props = page.value_props %}
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign value_props = page.value_props | default: t.value_props %}
+
 <section class="section-py mvp-value-props bg-body">
   <div class="container py-8">
     {% if value_props.heading %}
@@ -7,6 +9,7 @@
     {% if value_props.description %}
       <p class="text-body mb-6">{{ value_props.description }}</p>
     {% endif %}
+
     <div class="row g-6">
       {% for item in value_props.items %}
         <div class="col-md-4">

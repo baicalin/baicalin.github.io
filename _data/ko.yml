@@ -8,10 +8,367 @@ nav:
   docs: "문서"
   examples: "예시"
 
+# title: 홈
+# description: KnockG로 유전자 섭동 가설 검증을 더 빠르게 시작하세요.
+
 hero:
-  title: "생명과학과 인공지능을 연결하다"
-  subtitle: "실리코팜의 오믹스 생성 인공지능 솔루션 KnockG<sup>TM</sup>은 저비용 고효율로 가상의 실험결과 값을 생성하여 기초, 의학 및 제약 분야 연구를 가속화 합니다."
+  eyebrow: "KnockG MVP"
+  title: "생명과학과 인공지능을 연결하다 / 실험 전에 섭동 결과를 먼저 시뮬레이션하세요"
+  subtitle: "실리코팜의 오믹스 생성 인공지능 솔루션 KnockG<sup>TM</sup>은 저비용 고효율로 가상의 실험결과 값을 생성하여 기초, 의학 및 제약 분야 연구를 가속화 합니다. / KnockG는 기존 오믹스 데이터를 기반으로 가상 결과를 생성해 바이오 및 신약개발 팀의 가설 검증 속도를 높입니다."
   button_text: "무료 버전 바로 사용해보기"
+
+  primary_cta:
+    label: "시작하기"
+    url: "/get-started/"
+  secondary_cta:
+    label: "문서 보기"
+    url: "/docs/"
+  badges:
+    - "웹 앱과 API 동시 지원"
+    - "중개연구 워크플로에 최적화"
+    - "질문에서 후보군 도출까지 한 흐름"
+  panel_heading: "첫날 바로 할 수 있는 작업"
+  panel_points:
+    - "보유 데이터를 불러오고 섭동 시나리오를 선택합니다."
+    - "후보 타깃에 대한 가상 발현 변화를 생성합니다."
+    - "결과를 내보내어 팀 검토와 우선순위 결정에 활용합니다."
+
+value_props:
+  heading: "팀이 KnockG를 선택하는 이유"
+  description: "가설 수립부터 의사결정까지 반복 속도를 높이도록 구조화되어 있습니다."
+  items:
+    - title: "초기 탐색 주기 단축"
+      description: "비용이 큰 실험 전에 여러 타깃 가설을 먼저 평가할 수 있습니다."
+    - title: "섭동 조건 비교 용이"
+      description: "knockdown/activation 조건을 일관된 출력 형식으로 나란히 비교할 수 있습니다."
+    - title: "의사결정 추적 가능"
+      description: "가정, 생성 결과, 후보 선정 근거를 재현 가능한 형태로 남길 수 있습니다."
+
+how_it_works:
+  heading: "작동 방식"
+  description: "원천 데이터에서 후보 우선순위까지, 최소 3단계로 진행합니다."
+  steps:
+    - title: "준비 및 설정"
+      description: "데이터셋과 기준 조건을 정하고 섭동할 유전자/단백질을 선택합니다."
+    - title: "생성 및 점검"
+      description: "모델 실행 후 가상 오믹스 결과, 마커 변화, 신뢰 신호를 확인합니다."
+    - title: "우선순위 및 공유"
+      description: "효과와 일관성을 기준으로 후보를 정렬하고 팀 검토용으로 내보냅니다."
+
+collaboration:
+  heading: "협업 연구를 위한 구조"
+  description: "KnockG는 계산생물학 팀, 실험팀, 외부 파트너 간 협업 워크플로를 지원합니다."
+  points:
+    - "하나의 시뮬레이션 문제 정의로 팀 정렬"
+    - "일관된 모델 출력으로 타깃 근거 검토"
+    - "in silico 후보군에서 실험 계획으로 자연스럽게 전환"
+  cta:
+    heading: "실전 예시 확인"
+    description: "활용 시나리오와 예상 출력 형태를 확인하세요."
+    label: "예제 보기"
+    url: "/examples/"
+
+get_started:
+  hero:
+    eyebrow: "시작하기"
+    title: "몇 분 안에 첫 KnockG 워크플로를 실행해 보세요"
+    subtitle: "빠른 탐색은 웹 앱에서 시작하고, 반복 가능한 파이프라인이 필요해지면 API로 확장하세요."
+    primary_cta:
+      label: "문서 열기"
+      url: "/docs/"
+    secondary_cta:
+      label: "예시 보기"
+      url: "/examples/"
+    side_panel:
+      heading: "MVP 범위"
+      description: "이 가이드는 설정, 첫 실행, 최소 API 호출까지를 다룹니다."
+
+  quickstart:
+    heading: "빠른 시작"
+    description: "아래 순서대로 진행하면 계정 설정부터 첫 결과 검토까지 빠르게 도달할 수 있습니다."
+    steps:
+      - kicker: "Step 1"
+        title: "워크스페이스와 데이터셋 준비"
+        description: "기준 조건(baseline), 후보 타깃, 비교에 사용할 기대 출력(지표/마커)을 정의합니다."
+      - kicker: "Step 2"
+        title: "첫 섭동(perturbation) 실행"
+        description: "웹 인터페이스에서 시나리오 1개를 설정하고 초기 가상 오믹스 결과를 생성합니다."
+      - kicker: "Step 3"
+        title: "검토 및 내보내기"
+        description: "마커 수준 변화를 확인하고 후보군을 추린 뒤, 실행 요약을 내보냅니다."
+
+  web_vs_api:
+    heading: "Web vs API"
+    description: "현재 단계와 팀 워크플로에 맞는 인터페이스를 선택하세요."
+    web:
+      title: "웹 앱"
+      description: "탐색과 협업 기반 검토에 최적입니다."
+      points:
+        - "가이드 입력과 시각적 검증으로 빠르게 시작할 수 있습니다."
+        - "초기 타깃 브레인스토밍/리뷰 미팅에 유용합니다."
+        - "비기술 이해관계자도 확인 가능한 요약을 내보낼 수 있습니다."
+    api:
+      title: "API"
+      description: "자동화와 재현 가능한 실행에 최적입니다."
+      points:
+        - "내부 파이프라인 및 노트북 환경과 쉽게 연동됩니다."
+        - "표준화된 파라미터 기반 실행을 지원합니다."
+        - "배치 실행과 후속 툴링(다운스트림 분석) 확장이 가능합니다."
+
+  code:
+    heading: "최소 API 예시"
+    description: "연동을 시작할 때 참고할 수 있는 최소 요청 예시입니다."
+    doc_link:
+      label: "API 문서"
+      url: "/docs/api/"
+    snippet: |
+      curl -X POST "https://api.knockg.com/v1/simulations" \
+        -H "Authorization: Bearer <YOUR_API_KEY>" \
+        -H "Content-Type: application/json" \
+        -d '{
+          "dataset_id": "ds_example_001",
+          "mode": "knockdown",
+          "targets": ["GENE_A", "GENE_B"],
+          "condition": "treated"
+        }'
+
+example_detail_labels:
+  problem: "문제"
+  approach: "접근"
+  outcome: "결과"
+
+examples_gallery:
+  heading: "예시"
+  description: "팀이 KnockG를 활용해 가설에서 후보 타겟 리스트로 빠르게 이동하는 실제 워크플로우를 확인하세요."
+  items:
+    - title: "타겟 발굴"
+      description: "질환 맥락에서 퍼터베이션 결과를 시뮬레이션하여 후보 유전자를 우선순위화합니다."
+      image: "/assets/img/examples/example_01.svg"
+      url: "/examples/target-discovery/"
+      cta_label: "예시 보기"
+
+    - title: "마커 검증"
+      description: "실험 전에 가상 마커 변화가 생물학적 기대와 일치하는지 빠르게 점검합니다."
+      image: "/assets/img/examples/example_02.svg"
+      url: "/examples/marker-validation/"
+      cta_label: "예시 보기"
+
+    - title: "후보 랭킹"
+      description: "여러 시뮬레이션 결과를 비교하여 효과, 일관성, 신뢰 신호로 후보를 정렬합니다."
+      image: "/assets/img/examples/example_03.svg"
+      url: "/examples/candidate-ranking/"
+      cta_label: "예시 보기"
+
+    - title: "타겟 발굴"
+      description: "질환 맥락에서 퍼터베이션 결과를 시뮬레이션하여 후보 유전자를 우선순위화합니다."
+      image: "/assets/img/examples/example_04.svg"
+      url: "/examples/target-discovery/"
+      cta_label: "예시 보기"
+
+    - title: "마커 검증"
+      description: "실험 전에 가상 마커 변화가 생물학적 기대와 일치하는지 빠르게 점검합니다."
+      image: "/assets/img/examples/example_05.svg"
+      url: "/examples/marker-validation/"
+      cta_label: "예시 보기"
+
+    - title: "후보 랭킹"
+      description: "여러 시뮬레이션 결과를 비교하여 효과, 일관성, 신뢰 신호로 후보를 정렬합니다."
+      image: "/assets/img/examples/example_06.svg"
+      url: "/examples/candidate-ranking/"
+      cta_label: "예시 보기"
+
+    - title: "후보 랭킹"
+      description: "여러 시뮬레이션 결과를 비교하여 효과, 일관성, 신뢰 신호로 후보를 정렬합니다."
+      image: "/assets/img/examples/example_07.svg"
+      url: "/examples/candidate-ranking/"
+      cta_label: "예시 보기"
+
+examples:
+  target_discovery:
+    example_detail:
+      eyebrow: "예시 상세"
+      title: "타겟 발굴"
+      summary: "이 예시는 팀이 퍼터베이션 가설을 평가하고, 비용이 큰 검증 실험에 들어가기 전에 후보 타겟을 좁히는 방법을 보여줍니다."
+      problem: "팀은 방대한 후보 목록에서 고신뢰 개입 후보를 식별하면서, 웻랩 실험 횟수를 줄여야 합니다."
+      approach_steps:
+        - "질환 관련 데이터셋을 선택하고 baseline과 treated 조건을 정의합니다."
+        - "후보 유전자에 대해 녹다운 시뮬레이션을 실행하고 마커 반응을 비교합니다."
+        - "효과 크기, 일관성, 생물학적 타당성을 기준으로 타겟을 우선순위화합니다."
+      outcomes:
+        - "후속 검증을 위한 후보 세트 단축."
+        - "시뮬레이션 결과에 연결된 추적 가능한 근거 확보."
+        - "인실리코 분석에서 실험 계획으로 더 빠른 전환."
+      next_cta:
+        label: "Condition Spec 읽기"
+        url: "/docs/condition-spec/"
+
+docs_sidebar:
+  heading: "문서"
+
+docs_nav:
+  docs_overview: "문서 개요"
+  docs_getting_started: "시작하기"
+  docs_concepts: "개념"
+  docs_condition_spec: "조건 명세"
+  docs_api: "API"
+
+docs_overview:
+  heading: "문서"
+  description: "시작하기부터 확인한 뒤, 개념 → 조건 명세 → API 순서로 구현 세부사항을 살펴보세요."
+  cards:
+    - title: "시작하기"
+      summary: "첫 실행 체크리스트와 워크플로 설정."
+      url: "/docs/getting-started/"
+    - title: "개념"
+      summary: "섭동 시뮬레이션의 핵심 개념."
+      url: "/docs/concepts/"
+    - title: "조건 명세"
+      summary: "시뮬레이션 입력을 재현 가능한 형식으로 정의."
+      url: "/docs/condition-spec/"
+    - title: "API"
+      summary: "엔드포인트 개요와 요청 예시."
+      url: "/docs/api/"
+
+docs_pages:
+  docs_getting_started:
+    heading: "시작하기"
+    intro: "이 페이지를 따라 첫 시뮬레이션을 실행하고, 출력 품질을 빠르게 검증할 수 있습니다."
+    sections:
+      - type: h3
+        text: "체크리스트"
+      - type: ul
+        items:
+          - "baseline과 treated 조건을 포함한 데이터셋이 준비되어 있습니다."
+          - "섭동할 타깃 유전자 또는 단백질이 선정되어 있습니다."
+          - "첫 실행 성공 기준(지표/마커 등)이 정의되어 있습니다."
+      - type: h3
+        text: "첫 실행 흐름"
+      - type: ol
+        items:
+          - "새 시뮬레이션을 생성하고 섭동 모드를 선택합니다."
+          - "조건 파라미터와 선택된 타깃을 설정합니다."
+          - "실행 후 마커 수준 변화를 확인하고 요약을 내보냅니다."
+      - type: alert_next
+        prefix: "다음: 팀 내 해석을 맞추기 위해 "
+        link_label: "개념"
+        url: "/docs/concepts/"
+        suffix: "을 읽어보세요."
+
+  docs_concepts:
+    heading: "개념"
+    intro: "설계, 실행, 리뷰에서 공통으로 사용할 용어를 정리합니다."
+    sections:
+      - type: h3
+        text: "섭동 모드(Perturbation Mode)"
+      - type: p_html
+        html: "시뮬레이션에서 타깃을 어떻게 변경하는지 정의합니다. 대표 모드는 <code>knockdown</code>, <code>activation</code>입니다."
+      - type: h3
+        text: "조건(Condition)"
+      - type: p
+        text: "타깃 효과를 추정하는 실험 맥락(예: control vs treated)을 의미합니다."
+      - type: h3
+        text: "출력 해석(Output Interpretation)"
+      - type: ul
+        items:
+          - "효과 크기와 일관성으로 후보를 우선순위화합니다."
+          - "생물학적 근거에 맞춰 마커 수준 반응을 검토합니다."
+          - "내보낸 결과를 후속 랭킹/실험 계획에 활용합니다."
+      - type: alert_next
+        prefix: "다음: 재현 가능한 입력을 위해 "
+        link_label: "조건 명세"
+        url: "/docs/condition-spec/"
+        suffix: "를 정의하세요."
+
+  docs_condition_spec:
+    heading: "조건 명세(Condition Spec)"
+    intro: "조건 명세는 시뮬레이션 요청을 안정적이고 반복 가능한 구조로 정의합니다."
+    sections:
+      - type: h3
+        text: "필수 필드"
+      - type: ul
+        items:
+          - "<code>dataset_id</code>: 준비된 데이터 식별자"
+          - "<code>mode</code>: <code>knockdown</code> 등 섭동 모드"
+          - "<code>targets</code>: 섭동할 유전자/단백질 목록"
+          - "<code>condition</code>: 시나리오를 구분하는 조건 라벨"
+      - type: h3
+        text: "예시 스펙"
+      - type: pre
+        code: |
+          {
+            "dataset_id": "ds_example_001",
+            "mode": "knockdown",
+            "targets": ["GENE_A", "GENE_B"],
+            "condition": "treated"
+          }
+      - type: alert_next
+        mt5: true
+        prefix: "다음: 엔드포인트 호출은 "
+        link_label: "API"
+        url: "/docs/api/"
+        suffix: "에서 확인하세요."
+
+  docs_api:
+    heading: "API"
+    intro: "반복 가능하고 스크립트 기반의 시뮬레이션 실행에는 API를 사용하세요."
+    sections:
+      - type: h3
+        text: "인증(Authentication)"
+      - type: p_html
+        html: "<code>Authorization</code> 헤더에 <code>Bearer &lt;YOUR_API_KEY&gt;</code> 형태로 API 키를 전달합니다."
+      - type: h3
+        text: "엔드포인트(Endpoint)"
+      - type: ul
+        items:
+          - "<code>POST /v1/simulations</code>: 시뮬레이션 요청 생성 및 실행"
+      - type: h3
+        text: "최소 요청 예시"
+      - type: pre
+        code: |
+          curl -X POST "https://api.knockg.com/v1/simulations" \
+            -H "Authorization: Bearer <YOUR_API_KEY>" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "dataset_id": "ds_example_001",
+              "mode": "knockdown",
+              "targets": ["GENE_A", "GENE_B"],
+              "condition": "treated"
+            }'
+      - type: h3
+        text: "응답 형식(Response shape)"
+      - type: pre
+        code: |
+          {
+            "simulation_id": "sim_12345",
+            "status": "completed",
+            "summary": {
+              "top_candidates": ["GENE_A", "GENE_B"]
+            }
+          }
+
+
+
+# value_props:
+#   heading: "유용한 기능들"
+#   description: "실험 없이 결과 오믹스 데이터를 생성"
+#   items:
+#     - title: "시계열 데이터 생성"
+#       description: "중간/미래 시점의 오믹스 데이터를 생성합니다."
+#     - title: "타겟 녹다운/활성화 데이터 생성"
+#       description: "특정 타겟의 녹다운/활성화 시 데이터를 생성합니다."
+#     - title: "신규 타겟 및 후보물질 탐색"
+#       description: "비교/분석으로 신규 타겟을 탐색하고 참고 정보를 제공합니다."
+
+# how_it_works:
+#   heading: "사용 방법"
+#   description: "빠르게 시작할 수 있는 간단한 워크플로우입니다."
+#   steps:
+#     - title: "회원가입"
+#       description: "계정을 생성하고 플랫폼에 접속합니다."
+#     - title: "시뮬레이션 실행"
+#       description: "조건/타겟을 선택하고 예측 데이터를 생성합니다."
+#     - title: "분석 및 내보내기"
+#       description: "결과를 검토하고 연구에 활용합니다."
 
 features:
   section_title: "유용한 기능들"
@@ -99,4 +456,4 @@ contact_us:
   section_title: "문의하기"
   main_title_bold: "함께"
   main_title: "하실 분들"
-  description: "제품에서 공동연구 및 채용 관련 문의까지 오른쪽 하단 채널톡으로 언제든지 문의부탁드립니다."  
+  description: "제품에서 공동연구 및 채용 관련 문의까지 오른쪽 하단 채널톡으로 언제든지 문의부탁드립니다."

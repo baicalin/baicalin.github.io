@@ -1,20 +1,27 @@
-{% assign gs = page.get_started %}
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign gs = page.get_started | default: t.get_started %}
+
+{% if gs and gs.quickstart %}
 <section class="section-py mvp-get-started-quickstart bg-body">
   <div class="container py-8">
-    <h2 class="fw-bold mb-3">{{ gs.quickstart.heading }}</h2>
-    <p class="mb-6">{{ gs.quickstart.description }}</p>
-    <div class="row g-6">
-      {% for step in gs.quickstart.steps %}
-        <div class="col-md-4">
-          <div class="card h-100 shadow-none border">
-            <div class="card-body p-6">
-              <span class="badge bg-primary mb-3">{{ step.kicker }}</span>
-              <h5 class="mb-3">{{ step.title }}</h5>
-              <p class="mb-0">{{ step.description }}</p>
+    {% if gs.quickstart.heading %}<h2 class="fw-bold mb-3">{{ gs.quickstart.heading }}</h2>{% endif %}
+    {% if gs.quickstart.description %}<p class="mb-6">{{ gs.quickstart.description }}</p>{% endif %}
+
+    {% if gs.quickstart.steps %}
+      <div class="row g-6">
+        {% for step in gs.quickstart.steps %}
+          <div class="col-md-4">
+            <div class="card h-100 shadow-none border">
+              <div class="card-body p-6">
+                {% if step.kicker %}<span class="badge bg-primary mb-3">{{ step.kicker }}</span>{% endif %}
+                {% if step.title %}<h5 class="mb-3">{{ step.title }}</h5>{% endif %}
+                {% if step.description %}<p class="mb-0">{{ step.description }}</p>{% endif %}
+              </div>
             </div>
           </div>
-        </div>
-      {% endfor %}
-    </div>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </section>
+{% endif %}

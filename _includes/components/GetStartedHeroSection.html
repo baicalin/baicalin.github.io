@@ -1,4 +1,7 @@
-{% assign gs = page.get_started %}
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign gs = page.get_started | default: t.get_started %}
+
+{% if gs and gs.hero %}
 <section class="section-py mvp-get-started-hero">
   <div class="container py-10">
     <div class="row g-6 align-items-center">
@@ -6,21 +9,30 @@
         {% if gs.hero.eyebrow %}
           <p class="text-uppercase text-primary fw-semibold mb-3">{{ gs.hero.eyebrow }}</p>
         {% endif %}
-        <h1 class="display-6 fw-bold mb-4">{{ gs.hero.title }}</h1>
-        <p class="lead mb-5">{{ gs.hero.subtitle }}</p>
+        {% if gs.hero.title %}<h1 class="display-6 fw-bold mb-4">{{ gs.hero.title }}</h1>{% endif %}
+        {% if gs.hero.subtitle %}<p class="lead mb-5">{{ gs.hero.subtitle }}</p>{% endif %}
+
         <div class="d-flex flex-wrap gap-3">
-          <a class="btn btn-primary" href="{{ gs.hero.primary_cta.url | relative_url }}">{{ gs.hero.primary_cta.label }}</a>
-          <a class="btn btn-outline-primary" href="{{ gs.hero.secondary_cta.url | relative_url }}">{{ gs.hero.secondary_cta.label }}</a>
+          {% if gs.hero.primary_cta %}
+            <a class="btn btn-primary" href="{{ gs.hero.primary_cta.url | relative_url }}">{{ gs.hero.primary_cta.label }}</a>
+          {% endif %}
+          {% if gs.hero.secondary_cta %}
+            <a class="btn btn-outline-primary" href="{{ gs.hero.secondary_cta.url | relative_url }}">{{ gs.hero.secondary_cta.label }}</a>
+          {% endif %}
         </div>
       </div>
+
       <div class="col-lg-4">
-        <div class="card shadow-none border">
-          <div class="card-body p-6">
-            <h5 class="mb-3">{{ gs.hero.side_panel.heading }}</h5>
-            <p class="mb-0">{{ gs.hero.side_panel.description }}</p>
+        {% if gs.hero.side_panel %}
+          <div class="card shadow-none border">
+            <div class="card-body p-6">
+              {% if gs.hero.side_panel.heading %}<h5 class="mb-3">{{ gs.hero.side_panel.heading }}</h5>{% endif %}
+              {% if gs.hero.side_panel.description %}<p class="mb-0">{{ gs.hero.side_panel.description }}</p>{% endif %}
+            </div>
           </div>
-        </div>
+        {% endif %}
       </div>
     </div>
   </div>
 </section>
+{% endif %}
