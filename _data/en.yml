@@ -8,6 +8,17 @@ nav:
   docs: "Docs"
   examples: "Examples"
 
+not_found:
+  eyebrow: "404"
+  title: "Page not found"
+  description: "The page you requested does not exist or the address may be incorrect."
+  primary_cta:
+    label: "Go Home"
+    url: "/"
+  secondary_cta:
+    label: "Open Docs"
+    url: "/docs/"
+
 # title: Home
 # description: Build gene perturbation hypotheses faster with KnockG.
 
