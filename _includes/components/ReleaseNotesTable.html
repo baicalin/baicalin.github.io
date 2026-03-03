@@ -1,0 +1,52 @@
+{% assign lang = site.active_lang %}
+{% assign t = site.data[lang] %}
+{% assign default_lang = site.default_lang | default: "en" %}
+
+{%- assign notes = site.release_notes
+| where: "lang", lang
+| sort: "date"
+| reverse -%}
+
+<section class="section-py mvp-release-notes">
+  <div class="container py-8">
+    <h1 class="fw-bold mb-4">{{ t.release_notes_ui.heading | default: "Release Notes" }}</h1>
+
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th class="text-center" style="width:120px;">{{ t.release_notes_ui.table_headers.version | default: "버전" }}
+            </th>
+            <th class="text-center" style="width:140px;">{{ t.release_notes_ui.table_headers.date | default: "날짜" }}
+            </th>
+            <th class="text-center">{{ t.release_notes_ui.table_headers.changes | default: "변경이력" }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for note in notes %}
+          <tr id="rn-{{ note.version | replace:'.','-' }}">
+            <td class="fw-semibold text-center">{{ note.version }}</td>
+            <td class="text-center">{{ note.date | date: "%Y.%m.%d" }}</td>
+            <td class="release-notes-md text-start">
+              <!-- {%- if note.title -%}
+                  {%- if note.title_url -%}
+                    <a class="fw-semibold text-decoration-none" href="{{ note.title_url | relative_url }}">
+                      {{ note.title }}
+                    </a>
+                  {%- else -%}
+                    <span class="fw-semibold">{{ note.title }}</span>
+                  {%- endif -%}
+                {%- endif -%} -->
+
+              <div class="mt-2">
+                <!-- <div class="release-notes-md markdown"> -->
+                {{ note.content }}
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

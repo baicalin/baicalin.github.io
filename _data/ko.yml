@@ -7,6 +7,7 @@ nav:
   get_started: "시작하기"
   docs: "문서"
   examples: "예시"
+  release_notes: "릴리즈 노트"
 
 not_found:
   eyebrow: "404"

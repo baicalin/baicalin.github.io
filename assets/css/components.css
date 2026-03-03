@@ -48,3 +48,59 @@
     padding-bottom: 2.5rem;
   }
 }
+
+/* Release Notes table header: no gray fill, only top/bottom lines */
+.mvp-release-notes .table thead th {
+  background-color: transparent !important;
+}
+
+.mvp-release-notes .table thead {
+  border-top: 1px solid rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+.mvp-release-notes .table thead th {
+  font-weight: 600;
+  border-bottom: 0 !important; /* bootstrap 기본선 제거(겹침 방지) */
+}
+
+.mvp-release-notes .release-notes-md ul { margin: 0; padding-left: 1.25rem; }
+.mvp-release-notes .release-notes-md li { margin-bottom: 0.25rem; }
+.mvp-release-notes .release-notes-md p { margin: 0; }
+
+
+/* Release Notes only */
+.mvp-release-notes .badge-blue {
+  background-color: rgba(24, 73, 220, 0.08);
+  color: #194bdc;
+}
+
+.mvp-release-notes .badge-green {
+  background-color: rgba(0, 153, 110, 0.08);
+  color: #009a6f;
+}
+
+.mvp-release-notes .badge-yellow {
+  background-color: rgba(230, 130, 0, 0.08);
+  color: #e68200;
+}
+
+.mvp-release-notes .badge-red {
+  background-color: rgba(220, 24, 24, 0.08);
+  color: #dc1919;
+}
+
+/* (선택) 배지 공통 형태 */
+.mvp-release-notes .badge-blue,
+.mvp-release-notes .badge-green,
+.mvp-release-notes .badge-yellow,
+.mvp-release-notes .badge-red {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-right: 8px;
+  vertical-align: middle;
+}
