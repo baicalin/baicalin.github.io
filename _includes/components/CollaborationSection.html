@@ -1,0 +1,33 @@
+{% assign collaboration = page.collaboration %}
+<section class="section-py mvp-collaboration bg-body">
+  <div class="container py-8">
+    <div class="row g-6 align-items-center">
+      <div class="col-lg-8">
+        {% if collaboration.heading %}
+          <h2 class="fw-bold mb-3">{{ collaboration.heading }}</h2>
+        {% endif %}
+        {% if collaboration.description %}
+          <p class="mb-4">{{ collaboration.description }}</p>
+        {% endif %}
+        {% if collaboration.points %}
+          <ul class="mb-0 ps-3">
+            {% for point in collaboration.points %}
+              <li class="mb-2">{{ point }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      <div class="col-lg-4">
+        <div class="card shadow-none border">
+          <div class="card-body p-6">
+            <h5 class="mb-3">{{ collaboration.cta.heading | default: "Next step" }}</h5>
+            <p class="mb-4">{{ collaboration.cta.description }}</p>
+            <a class="btn btn-primary w-100" href="{{ collaboration.cta.url | relative_url }}">
+              {{ collaboration.cta.label }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

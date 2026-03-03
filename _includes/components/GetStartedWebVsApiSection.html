@@ -1,0 +1,35 @@
+{% assign gs = page.get_started %}
+<section class="section-py mvp-get-started-web-api">
+  <div class="container py-8">
+    <h2 class="fw-bold mb-3">{{ gs.web_vs_api.heading }}</h2>
+    <p class="mb-6">{{ gs.web_vs_api.description }}</p>
+    <div class="row g-6">
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-none border">
+          <div class="card-body p-6">
+            <h4 class="mb-4">{{ gs.web_vs_api.web.title }}</h4>
+            <p class="mb-4">{{ gs.web_vs_api.web.description }}</p>
+            <ul class="ps-3 mb-0">
+              {% for point in gs.web_vs_api.web.points %}
+                <li class="mb-2">{{ point }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-none border">
+          <div class="card-body p-6">
+            <h4 class="mb-4">{{ gs.web_vs_api.api.title }}</h4>
+            <p class="mb-4">{{ gs.web_vs_api.api.description }}</p>
+            <ul class="ps-3 mb-0">
+              {% for point in gs.web_vs_api.api.points %}
+                <li class="mb-2">{{ point }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

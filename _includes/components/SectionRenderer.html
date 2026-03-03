@@ -1,0 +1,10 @@
+{% case include.section.type %}
+  {% when "HeroSection" %}
+    {% include components/HeroSection.html %}
+  {% when "ValuePropsSection" %}
+    {% include components/ValuePropsSection.html %}
+  {% when "HowItWorksSection" %}
+    {% include components/HowItWorksSection.html %}
+  {% when "CollaborationSection" %}
+    {% include components/CollaborationSection.html %}
+{% endcase %}

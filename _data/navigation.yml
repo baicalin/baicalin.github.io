@@ -1,0 +1,40 @@
+primary:
+  - key: home
+    label: Home
+    url: /
+  - key: get_started
+    label: Get Started
+    url: /get-started/
+  - key: docs
+    label: Docs
+    url: /docs/
+  - key: examples
+    label: Examples
+    url: /examples/
+
+docs:
+  - key: docs_overview
+    label: Docs Overview
+    url: /docs/
+  - key: docs_getting_started
+    label: Getting Started
+    url: /docs/getting-started/
+  - key: docs_concepts
+    label: Concepts
+    url: /docs/concepts/
+  - key: docs_condition_spec
+    label: Condition Spec
+    url: /docs/condition-spec/
+  - key: docs_api
+    label: API
+    url: /docs/api/
+
+footer:
+  - label: Home
+    url: /
+  - label: Get Started
+    url: /get-started/
+  - label: Docs
+    url: /docs/
+  - label: Examples
+    url: /examples/
