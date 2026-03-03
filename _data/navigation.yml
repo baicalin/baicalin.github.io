@@ -11,6 +11,9 @@ primary:
   - key: examples
     label: Examples
     url: /examples/
+  - key: release_notes
+    label: Release Notes
+    url: /release-notes/
 
 docs:
   - key: docs_overview
@@ -42,3 +45,6 @@ footer:
   - key: examples
     label: Examples
     url: /examples/
+  - key: release_notes
+    label: Release Notes
+    url: /release-notes/
