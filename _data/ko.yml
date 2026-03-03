@@ -49,6 +49,28 @@ pricing:
       description: "결과 검토 후 결제가능"
       features: "KnockG 전체 기능 활용 / 비식별화 해제|해당 생성 인공지능 모델 무제한 사용|다중 타겟 녹다운 시뮬레이션|특허 정보 조회|연구 우선권 보호 (타겟 비식별화)|요청에 따른 추가 분석 및 보고서 제공"
 
+reviews:
+  section_title: "실제 사용자 리뷰"
+  main_title: "종양, 뇌·신경, 대사질환"
+  main_description: "다양한 질환에서 생성 데이터의 정확성, 데이터 분석을 통한 시간 및 비용절감 효과를 확인하였습니다."
+  items:
+    - branding: "/assets/img/front-pages/branding/sp_logo_resized.png"
+      description: "간암, 알츠하이머 성 치매에서 성공적으로 신규 타겟 기반 신약 재창출을 수행하였으며, 여러 연구기관 및 병원과의 협업을 통해 비소세포성폐암과 케네디 병 등의 질환연구를 진행하고 있습니다."
+      position: "실리코팜"
+      name: "연구소장 김범수"
+    - branding: "/assets/img/front-pages/branding/DGIST_cprc_logo.png"
+      description: "본 연구자는 전립선, 간, 비소세포성 폐암 환자의 오믹스 데이터 기반 KnockG를 활용하여 현재 신규 치료 타겟 유전자 및 물질 발굴 연구를 수행하고 있습니다. KnockG는 다양한 오믹스 데이터를 이용하여, 실험없이 특정 유전자의 발현을 감소시켰을 때, 다른 유전자들의 발현을 한 번에 시각화 하여 보여줍니다. 이러한 In silico 결과를 바탕으로 신속한 연구방향 설계 및 효육적인 실험을 설정할 수 있게 도와줍니다."
+      position: "DGIST 핵심단백질자원센터"
+      name: "센터장 최성균"
+    - branding: "/assets/img/front-pages/branding/GNU_logo.png"
+      description: "종양 및 배아/성체 줄기세포에 핵심적인 영향을 미치는 후보 유전자를 도출하고, 유전자의 기능을 In vitro 및 In vivo 수준에서 규명함으로써, 질환의 극복에 기여하고 치료 타겟 발굴 연구를 수행하고 있습니다."
+      position: "경상국립대학교"
+      name: "농업생명과학대학 축산과학부 조교수 박 송"
+    - branding: "/assets/img/front-pages/branding/KBRI_logo.png"
+      description: "루게릭병과 케네디병등의 운동신경세포 질환에서 성공적으로 신규 타겟을 도출하였으며, 이를 통해 발굴된 타겟의 유효성을 마우스 신경세포 및 환자 유래 세포기반 모델에서 검증 및 병인 기전과의 연관성을 확인하는 연구를 진행하고 있습니다. 이후, 병원과의 협업을 통해 진단 및 치료 전략을 확립하고자 합니다."
+      position: "한국뇌연구원"
+      name: "선임연구원 이신려"
+
 fun_facts:
   models_trained: "186+"
   models_trained_label: "학습 완료된 모델"
