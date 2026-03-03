@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-{% assign current_lang = page.lang | default: site.default_lang | default: "en" %}
+{% assign lang = site.active_lang %}
+{% assign t = site.data[lang] %}
 <html
-  lang="{{ current_lang }}"
+  lang="{{ lang }}"
   class="light-style layout-navbar-fixed layout-wide"
   dir="ltr"
   data-theme="theme-default"
@@ -17,7 +18,7 @@
 
     {% include ui/HeaderNav.html %}
 
-    <main class="mvp-page marketing-page">
+    <main class="mvp-page marketing-page" style="min-height: 100vh;">
       {{ content }}
     </main>
 

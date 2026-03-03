@@ -1,4 +1,6 @@
-{% assign workflow = page.how_it_works %}
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign workflow = page.how_it_works | default: t.how_it_works %}
+
 <section class="section-py mvp-how-it-works">
   <div class="container py-8">
     {% if workflow.heading %}
@@ -7,6 +9,7 @@
     {% if workflow.description %}
       <p class="text-body mb-6">{{ workflow.description }}</p>
     {% endif %}
+
     <div class="row g-6">
       {% for step in workflow.steps %}
         <div class="col-md-4">

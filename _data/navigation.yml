@@ -30,11 +30,15 @@ docs:
     url: /docs/api/
 
 footer:
-  - label: Home
+  - key: home
+    label: Home
     url: /
-  - label: Get Started
+  - key: get_started
+    label: Get Started
     url: /get-started/
-  - label: Docs
+  - key: docs
+    label: Docs
     url: /docs/
-  - label: Examples
+  - key: examples
+    label: Examples
     url: /examples/

@@ -1,15 +1,19 @@
-{% assign collaboration = page.collaboration %}
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign collaboration = page.collaboration | default: t.collaboration %}
+
 <section class="section-py mvp-collaboration bg-body">
   <div class="container py-8">
     <div class="row g-6 align-items-center">
       <div class="col-lg-8">
-        {% if collaboration.heading %}
+        {% if collaboration and collaboration.heading %}
           <h2 class="fw-bold mb-3">{{ collaboration.heading }}</h2>
         {% endif %}
-        {% if collaboration.description %}
+
+        {% if collaboration and collaboration.description %}
           <p class="mb-4">{{ collaboration.description }}</p>
         {% endif %}
-        {% if collaboration.points %}
+
+        {% if collaboration and collaboration.points %}
           <ul class="mb-0 ps-3">
             {% for point in collaboration.points %}
               <li class="mb-2">{{ point }}</li>
@@ -17,17 +21,27 @@
           </ul>
         {% endif %}
       </div>
+
       <div class="col-lg-4">
-        <div class="card shadow-none border">
-          <div class="card-body p-6">
-            <h5 class="mb-3">{{ collaboration.cta.heading | default: "Next step" }}</h5>
-            <p class="mb-4">{{ collaboration.cta.description }}</p>
-            <a class="btn btn-primary w-100" href="{{ collaboration.cta.url | relative_url }}">
-              {{ collaboration.cta.label }}
-            </a>
+        {% if collaboration and collaboration.cta %}
+          <div class="card shadow-none border">
+            <div class="card-body p-6">
+              <h5 class="mb-3">{{ collaboration.cta.heading | default: "Next step" }}</h5>
+
+              {% if collaboration.cta.description %}
+                <p class="mb-4">{{ collaboration.cta.description }}</p>
+              {% endif %}
+
+              {% if collaboration.cta.url and collaboration.cta.label %}
+                <a class="btn btn-primary w-100" href="{{ collaboration.cta.url | relative_url }}">
+                  {{ collaboration.cta.label }}
+                </a>
+              {% endif %}
+            </div>
           </div>
-        </div>
+        {% endif %}
       </div>
+
     </div>
   </div>
 </section>

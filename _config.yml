@@ -28,12 +28,32 @@ description: >- # this means to ignore newlines until "baseurl:"
   Our predictions on how disease progression can be inhibited, or
   what the gene expression levels will be under specific environmental/drug treatments
   when certain genes are knocked down, targeting researchers and pharmaceutical companies.
-default_lang: en
-languages:
-  - en
-  - ko  
 
+plugins:
+  - jekyll-polyglot
+
+languages: ["en", "ko"]
+default_lang: "en"
+
+# default_lang: en
+# languages:
+#   - en
+#   - ko
 baseurl: ""  
+
+exclude_from_localization:
+  - assets
+  - vendor
+  - CNAME
+  - sitemap.xml
+  - robots.txt
+
+# Windows 환경이면 false 권장 (병렬 빌드 충돌 방지)
+parallel_localization: false
+
+# Polyglot이 URL/언어스위처를 제대로 만들려면 url 설정이 중요
+url: "https://silicopharm.com"
+
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
