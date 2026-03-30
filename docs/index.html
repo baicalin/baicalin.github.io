@@ -1,6 +1,45 @@
 ---
 layout: docs
+enable_channeltalk: true
+title: Docs
+description: KnockG documentation overview.
+---
+
+{% assign t = site.data[site.active_lang] %}
+{% assign doc = t.docs_overview %}
+
+{% if doc %}
+  <h1 class="mb-3">{{ doc.heading | default: "Documentation" }}</h1>
+
+  {% if doc.description %}
+    <p class="mb-6">{{ doc.description }}</p>
+  {% endif %}
+
+  {% if doc.cards %}
+    <div class="row g-4">
+      {% for item in doc.cards %}
+        <div class="col-md-6">
+          <a class="card h-100 shadow-none border text-decoration-none" href="{{ item.url | relative_url }}">
+            <div class="card-body p-5">
+              {% if item.title %}<h4 class="mb-2">{{ item.title }}</h4>{% endif %}
+              {% if item.summary %}<p class="mb-0 text-body">{{ item.summary }}</p>{% endif %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% else %}
+
+  <h1 class="mb-3">Documentation</h1>
+  <p class="mb-6">Docs overview is not configured yet.</p>
+  
+{% endif %}
+
+<!-- ---
+layout: docs
 lang: en
+enable_channeltalk: true
 title: Docs
 description: KnockG documentation overview.
 ---
@@ -42,3 +81,7 @@ description: KnockG documentation overview.
     </a>
   </div>
 </div>
+
+{% for section in page.sections %}
+  {% include components/SectionRenderer.html section=section %}
+{% endfor %} -->

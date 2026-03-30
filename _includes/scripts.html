@@ -11,3 +11,7 @@
     <script src="{{ script_path | relative_url }}"></script>
   {% endfor %}
 {% endif %}
+
+{% if page.enable_channeltalk %}
+  {% include ui/ChannelTalk.html %}
+{% endif %}

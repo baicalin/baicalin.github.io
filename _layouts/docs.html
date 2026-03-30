@@ -1,7 +1,19 @@
 <!DOCTYPE html>
-{% assign current_lang = page.lang | default: site.default_lang | default: "en" %}
+{% assign lang = site.active_lang %}
+{% assign default_lang = site.default_lang | default: "en" %}
+{% assign t = site.data[lang] %}
+
+{% assign base_path = page.url %}
+{% if lang != default_lang %}
+  {% assign prefix = "/" | append: lang %}
+  {% assign base_path = page.url | replace_first: prefix, "" %}
+  {% if base_path == "" %}
+    {% assign base_path = "/" %}
+  {% endif %}
+{% endif %}
+
 <html
-  lang="{{ current_lang }}"
+  lang="{{ lang }}"
   class="light-style layout-navbar-fixed layout-wide"
   dir="ltr"
   data-theme="theme-default"
@@ -17,22 +29,27 @@
 
     {% include ui/HeaderNav.html %}
 
-    <main class="mvp-page docs-page section-py">
+    <main class="mvp-page docs-page section-py" style="min-height: 100vh;">
       <div class="container py-8">
         <div class="row g-6">
           <aside class="col-lg-3">
             <nav class="card shadow-none border docs-sidebar">
               <div class="card-body">
-                <h6 class="text-uppercase mb-4">Docs</h6>
+                <h6 class="text-uppercase mb-4">
+                  {{ t.docs_sidebar.heading | default: t.nav.docs | default: "Docs" }}
+                </h6>
+
                 <ul class="list-unstyled mb-0">
                   {% for item in site.data.navigation.docs %}
                     {% assign is_active = false %}
-                    {% if page.url == item.url %}
+                    {% if base_path == item.url %}
                       {% assign is_active = true %}
                     {% endif %}
+
                     <li class="mb-3">
-                      <a class="text-body{% if is_active %} fw-semibold{% endif %}" href="{{ item.url | relative_url }}">
-                        {{ item.label }}
+                      <a class="text-body{% if is_active %} fw-semibold{% endif %}"
+                          href="{{ item.url | relative_url }}">
+                        {{ t.docs_nav[item.key] | default: item.label }}
                       </a>
                     </li>
                   {% endfor %}
@@ -40,6 +57,7 @@
               </div>
             </nav>
           </aside>
+
           <article class="col-lg-9">
             {{ content }}
           </article>

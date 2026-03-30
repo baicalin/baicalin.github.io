@@ -1,4 +1,6 @@
-{% assign hero = page.hero %}
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign hero = page.hero | default: t.hero %}
+
 <section class="section-py mvp-hero">
   <div class="container py-10">
     <div class="row align-items-center g-6">
@@ -10,8 +12,9 @@
           <h1 class="display-5 fw-bold mb-4">{{ hero.title }}</h1>
         {% endif %}
         {% if hero.subtitle %}
-          <p class="lead mb-5">{{ hero.subtitle }}</p>
+          <p class="lead mb-5 mvp-hero-subtitle">{{ hero.subtitle }}</p>
         {% endif %}
+
         <div class="d-flex flex-wrap gap-3 mb-4">
           {% if hero.primary_cta %}
             <a class="btn btn-primary" href="{{ hero.primary_cta.url | relative_url }}">{{ hero.primary_cta.label }}</a>
@@ -20,6 +23,7 @@
             <a class="btn btn-outline-primary" href="{{ hero.secondary_cta.url | relative_url }}">{{ hero.secondary_cta.label }}</a>
           {% endif %}
         </div>
+
         {% if hero.badges %}
           <div class="d-flex flex-wrap gap-2">
             {% for badge in hero.badges %}
@@ -28,11 +32,12 @@
           </div>
         {% endif %}
       </div>
+
       <div class="col-lg-5">
         <div class="card shadow-none border">
           <div class="card-body p-6">
-            <h5 class="mb-4">{{ hero.panel_heading | default: "What you can do on day one" }}</h5>
-            <ul class="mb-0 ps-3">
+            <h5 class="mb-4">{{ hero.panel_heading }}</h5>
+            <ul class="mb-0 ps-3 mvp-hero-panel-points">
               {% for point in hero.panel_points %}
                 <li class="mb-2">{{ point }}</li>
               {% endfor %}
@@ -40,6 +45,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
