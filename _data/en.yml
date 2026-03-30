@@ -1,6 +1,6 @@
-title: "SilicoPharm, Inc."
+title: "SilicoPharm Inc."
 toggle: "KOR"
-toggle_href: "/index.ko.html"
+toggle_href: "/index.html"
 
 nav:
   home: "Home"
@@ -10,73 +10,79 @@ nav:
 
 not_found:
   eyebrow: "404"
-  title: "Page not found"
-  description: "The page you requested does not exist or the address may be incorrect."
+  title: "Page Not Found"
+  description: "The page you are looking for may not exist or the URL may be incorrect."
   primary_cta:
-    label: "Go Home"
+    label: "Go to Home"
     url: "/"
   secondary_cta:
-    label: "Open Docs"
+    label: "View Docs"
     url: "/docs/"
-
-# title: Home
-# description: Build gene perturbation hypotheses faster with KnockG.
 
 hero:
-  eyebrow: "KnockG MVP"
-  title: "Simulate perturbation outcomes before wet-lab execution / Bridging Life Sciences and AI"
-  subtitle: "KnockG helps biology and drug discovery teams test hypotheses quickly by generating virtual omics outcomes from existing data. / KnockG<sup>TM</sup>, SilicoPharm's AI Omics Generation Solution, accelerates research in basic, medical, and pharmaceutical fields by generating virtual experimental results at low cost and high efficiency."
-  button_text: "Try the free version now"
+  eyebrow: "KnockG"
+  title: "Generate and leverage virtual experimental, diagnostic, and clinical data"
+  subtitle: "KnockG<sup>TM</sup>, SilicoPharm’s omics foundation model solution, generates and analyzes virtual omics data for experimental, diagnostic, and clinical scenarios based on user-defined conditions. Researchers and clinicians can leverage this to discover novel targets, optimize clinical strategies, and improve bioprocesses such as cell therapy manufacturing."
+  button_text: "Get Started for Free"
 
   primary_cta:
-    label: "Get Started"
+    label: "Start Now"
     url: "/get-started/"
   secondary_cta:
-    label: "Read Docs"
+    label: "View Docs"
     url: "/docs/"
   badges:
-    - "Web app and API workflow"
-    - "Designed for translational research"
-    - "From question to shortlist in one flow"
-  panel_heading: "What you can do on day one"
+    - "Web Application"
+    - "Time-series & condition-specific omics data generation"
+    - "Validated in oncology and neurodegenerative diseases"
+    - "Proven PoC cases with innovative drug companies"
+  panel_heading: "Key Capabilities"
+  # panel_points:
+  #   - "Automated preprocessing of public and uploaded omics datasets"
+  #   - "Condition-driven virtual data generation (target perturbation, single/combination drug treatment, etc.)"
+  #   - "Generation of missing timepoints (intermediate or future states)"
+  #   - "Pseudo-experimental outputs (e.g., blotting) for pre-experimental validation"
+  #   - "Ranking of effective conditions with integrated literature and drug database search"
   panel_points:
-    - "Load an existing dataset and select a perturbation scenario."
-    - "Generate virtual expression responses for candidate targets."
-    - "Export outputs for downstream prioritization and review."
-
+    - "Automated preprocessing of public & uploaded omics data"
+    - "Target perturbation simulation"
+    - "Drug & combination simulation"
+    - "Timepoint expansion (intermediate & future)"
+    - "Pseudo-experimental outputs"
+    - "Ranking & knowledge integration (literature, drugs, patents)"
 value_props:
-  heading: "Why teams use KnockG"
-  description: "The platform is structured for fast iteration from hypothesis to decision."
+  heading: "Why KnockG"
+  description: "KnockG is designed with an automated pipeline that enables life science researchers—even without programming expertise—to generate and analyze omics data. By exploring virtual conditions in silico, users can reduce time and cost in experiments and clinical studies while enabling evidence-generating research."
   items:
-    - title: "Shorten early exploration cycles"
-      description: "Evaluate multiple target hypotheses before committing expensive experiment time."
-    - title: "Compare perturbation scenarios"
-      description: "Run side-by-side simulations for knockdown/activation conditions with consistent outputs."
-    - title: "Keep decisions traceable"
-      description: "Capture assumptions, generated results, and chosen candidates in a reproducible workflow."
+    - title: "Virtual generation of hard-to-obtain data"
+      description: "Generate data for conditions or samples that are difficult or impossible to obtain due to ethical, practical, or rarity constraints."
+    - title: "Simulation of experimental and clinical outcomes"
+      description: "Generate unseen data such as target perturbation experiments, cohort-specific clinical responses, and process-variable conditions in cell culture and manufacturing."
+    - title: "End-to-end data workflow"
+      description: "Provides preprocessing, condition configuration, analysis, and visualization of generated omics data in a unified workflow."
 
 how_it_works:
-  heading: "How it works"
-  description: "A minimal three-step process for moving from source data to candidate ranking."
+  heading: "How It Works"
   steps:
-    - title: "Prepare and configure"
-      description: "Choose a dataset, define baseline conditions, and select genes or proteins to perturb."
-    - title: "Generate and inspect"
-      description: "Run the model and inspect virtual omics outputs, marker-level changes, and confidence signals."
-    - title: "Prioritize and export"
-      description: "Rank candidates by effect and consistency, then export for team review or external analysis."
+    - title: "Select reference omics data"
+      description: "Use preprocessed dataset, import from public database or upload your own dataset."
+    - title: "Generate condition-specific data"
+      description: "Create virtual omics data for conditions not present in training data based on user-defined inputs (e.g., target perturbation, timepoint extension, drug treatment)."
+    - title: "Analyze and apply results"
+      description: "Visualize generated data and compare conditions to support validation experiments, evidence generation, and optimization of clinical or process conditions."
 
 collaboration:
-  heading: "Built for collaborative research programs"
-  description: "KnockG supports shared workflows between computational scientists, wet-lab teams, and external partners."
+  heading: "Designed for AI Ecosystem Integration"
+  description: "KnockG is provided as a web application, API, and MCP, serving as a data generation and augmentation layer that integrates seamlessly with structure-based AI and omics AI systems."
   points:
-    - "Align teams on one simulation-ready problem statement."
-    - "Review target rationales with consistent model outputs."
-    - "Transition from in silico shortlist to experimental planning."
+    - "Intuitive web interface accessible to non-programmers"
+    - "Seamless integration with external AI systems via API and MCP"
+    - "Supports workflows from target discovery to preclinical and clinical stages alongside structure-based AI"
+    - "Enhances predictive omics AI by providing virtual input data (e.g., future timepoints, cohorts)"
   cta:
-    heading: "See practical scenarios"
-    description: "Review example use cases and expected outputs."
-    label: "Explore Examples"
+    heading: "Explore Use Cases"
+    description: "Discover applications in target discovery, clinical research, and bioprocess optimization."
+    label: "View Examples"
     url: "/examples/"
 
 get_started:

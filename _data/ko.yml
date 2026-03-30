@@ -136,7 +136,7 @@ collaboration:
     - "판별형 오믹스 AI에 가상 입력 데이터(미래 시점·코호트 등)를 제공해 분석 성능 확장"
   cta:
     heading: "활용 예시 확인"
-    description: "질환 연구와 공정 최적화 사례를 간단히 살펴보세요."
+    description: "질환 타겟 탐색, 임상 분야 활용, 공정조건 최적화 등 다양한 적용 사례를 살펴보세요."
     label: "예시 보기"
     url: "/examples/"    
 
