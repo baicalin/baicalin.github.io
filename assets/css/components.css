@@ -3,10 +3,19 @@
   padding-bottom: var(--mvp-space-section-y);
 }
 
+.home-page > section.section-py + section.section-py {
+  padding-top: calc(var(--mvp-space-section-y) / 2);
+  padding-bottom: calc(var(--mvp-space-section-y) / 2);
+}
+
 .mvp-hero {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92)),
     url("/assets/img/hero/hero-bg.svg") center/cover no-repeat;
   border-bottom: 1px solid var(--mvp-color-border);
+}
+
+.mvp-page section.section-py.mvp-hero {
+  padding-bottom: 0;
 }
 
 .mvp-hero .badge,
@@ -17,6 +26,30 @@
 
 .mvp-get-started-hero {
   background: linear-gradient(180deg, #f9fbff, #f5f7fb);
+}
+
+.mvp-hero-subtitle {
+  text-align: justify;
+}
+
+.mvp-hero-panel-points li {
+  text-align: justify;
+}
+
+.mvp-value-props-description {
+  text-align: justify;
+}
+
+.mvp-value-props-item-body {
+  text-align: justify;
+}
+
+.mvp-how-it-works-heading {
+  text-align: center;
+}
+
+.mvp-how-it-works-item-description {
+  text-align: justify;
 }
 
 .mvp-how-it-works .badge {
@@ -46,5 +79,10 @@
   .mvp-page section.section-py {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .home-page > section.section-py + section.section-py {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }

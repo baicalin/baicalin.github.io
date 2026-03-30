@@ -18,7 +18,7 @@
 
     {% include ui/HeaderNav.html %}
 
-    <main class="mvp-page marketing-page" style="min-height: 100vh;">
+    <main class="mvp-page marketing-page{% if page.url == '/' %} home-page{% endif %}" style="min-height: 100vh;">
       {{ content }}
     </main>
 

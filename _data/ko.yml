@@ -22,62 +22,123 @@ not_found:
 # title: 홈
 # description: KnockG로 유전자 섭동 가설 검증을 더 빠르게 시작하세요.
 
+# hero:
+#   eyebrow: "KnockG"
+#   title: "(가상의 실험/진단/임상 데이터의 생성하고 활용하세요)"
+#   subtitle: "실리코팜의 오믹스 생성 인공지능 솔루션 KnockG<sup>TM</sup>은 저비용 고효율로 가상의 실험/진단/임상결과 오믹스 데이터를 생성하여 기초, 의학 및 제약 분야 연구를 가속화 합니다."
+#   button_text: "무료 버전 바로 사용해보기"
+
+#   primary_cta:
+#     label: "시작하기"
+#     url: "/get-started/"
+#   secondary_cta:
+#     label: "문서보기"
+#     url: "/docs/"
+#   badges:
+#     - "웹 앱과 API 동시 지원"
+#     - "중개연구 워크플로에 최적화"
+#     - "질문에서 후보군 도출까지 한 흐름"
+#   panel_heading: "첫날 바로 할 수 있는 작업"
+#   panel_points:
+#     - "보유 데이터를 불러오고 섭동 시나리오를 선택합니다."
+#     - "후보 타깃에 대한 가상 발현 변화를 생성합니다."
+#     - "결과를 내보내어 팀 검토와 우선순위 결정에 활용합니다."
 hero:
-  eyebrow: "KnockG MVP"
-  title: "생명과학과 인공지능을 연결하다 / 실험 전에 섭동 결과를 먼저 시뮬레이션하세요"
-  subtitle: "실리코팜의 오믹스 생성 인공지능 솔루션 KnockG<sup>TM</sup>은 저비용 고효율로 가상의 실험결과 값을 생성하여 기초, 의학 및 제약 분야 연구를 가속화 합니다. / KnockG는 기존 오믹스 데이터를 기반으로 가상 결과를 생성해 바이오 및 신약개발 팀의 가설 검증 속도를 높입니다."
-  button_text: "무료 버전 바로 사용해보기"
+  eyebrow: "KnockG"
+  title: "가상의 실험·진단·임상 결과를 생성/활용하세요"
+  subtitle: "실리코팜의 오믹스 파운데이션 모델 솔루션 KnockG<sup>TM</sup>는
+   사용자가 입력한 조건의 실험·진단·임상 결과 오믹스 데이터를 가상으로 생성하고 분석하는
+   기능을 제공합니다. 생명과학 연구자, 의사 등의 사용자는 이를 활용해 질환의 신규 타겟 발굴
+   최적 임상 조건 선정, 세포 치료제 등의 생산 공정 최적화 등을 수행할 수 있습니다."
+  button_text: "무료 버전 시작하기"
 
   primary_cta:
-    label: "시작하기"
+    label: "바로 시작하기"
     url: "/get-started/"
   secondary_cta:
     label: "문서 보기"
     url: "/docs/"
   badges:
-    - "웹 앱과 API 동시 지원"
-    - "중개연구 워크플로에 최적화"
-    - "질문에서 후보군 도출까지 한 흐름"
-  panel_heading: "첫날 바로 할 수 있는 작업"
+    - "웹 어플리케이션"
+    - "시계열 및 조건별 오믹스 데이터 생성"
+    - "종양 및 뇌·신경질환 검증 사례"
+    - "항체, 세포치료제 등 혁신 신약 기업 PoC 사례"
+  panel_heading: "주요 기능"
   panel_points:
-    - "보유 데이터를 불러오고 섭동 시나리오를 선택합니다."
-    - "후보 타깃에 대한 가상 발현 변화를 생성합니다."
-    - "결과를 내보내어 팀 검토와 우선순위 결정에 활용합니다."
-
+    - "공개 및 업로드한 오믹스 데이터의 자동 전처리"
+    - "타겟 억제, 약물 단독·병용 투여 등 사용자 입력 조건 별 가상 데이터 생성/활용"
+    - "Missing timepoint(중간·미래 등)의 데이터 가상 생성/활용"
+    - "Blotting 등 가상의 실험 결과 데이터를 생성하여 실험 전 유효한 조건 탐색"
+    - "유효 조건의 순위와 각 조건 별 학술·문헌·약물 데이터베이스 검색"
+# value_props:
+#   heading: "KnockG를 도입해야 하는 이유"
+#   description: "가설 수립부터 의사결정까지 반복 속도를 높이도록 구조화되어 있습니다."
+#   items:
+#     - title: "초기 탐색 주기 단축"
+#       description: "비용이 큰 실험 전에 여러 타깃 가설을 먼저 평가할 수 있습니다."
+#     - title: "섭동 조건 비교 용이"
+#       description: "knockdown/activation 조건을 일관된 출력 형식으로 나란히 비교할 수 있습니다."
+#     - title: "의사결정 추적 가능"
+#       description: "가정, 생성 결과, 후보 선정 근거를 재현 가능한 형태로 남길 수 있습니다."
 value_props:
-  heading: "팀이 KnockG를 선택하는 이유"
-  description: "가설 수립부터 의사결정까지 반복 속도를 높이도록 구조화되어 있습니다."
+  heading: "KnockG가 필요한 이유"
+  description: "자동화된 파이프라인을 통해 프로그래밍에 익숙하지 않은 생명과학 연구자도 손쉽게 오믹스 데이터를 다루고, 가상 데이터를 통해 유효한 조건을 탐색하여 실험 및 임상에 소요되는 시간과 비용을 줄이며 나아가 in silico 기반 근거생성 연구에 활용 할 수 있도록 설계했습니다."
   items:
-    - title: "초기 탐색 주기 단축"
-      description: "비용이 큰 실험 전에 여러 타깃 가설을 먼저 평가할 수 있습니다."
-    - title: "섭동 조건 비교 용이"
-      description: "knockdown/activation 조건을 일관된 출력 형식으로 나란히 비교할 수 있습니다."
-    - title: "의사결정 추적 가능"
-      description: "가정, 생성 결과, 후보 선정 근거를 재현 가능한 형태로 남길 수 있습니다."
-
+    - title: "희소 샘플 데이터의 가상생성"
+      description: "경제 윤리적 이유로 획득이 불가하거나,
+       희귀질환으로 획득이 어려운 샘플 및 조건의
+       데이터를 가상으로 생성하여 활용할 수 있습니다."
+    - title: "실험·진단·임상 결과 데이터 생성"
+      description: "학습 데이터에 포함되지 않은 기초연구에서의 타겟 억제 실험,
+       약물 임상에서의 코호트 별 결과, 세포 배양 등의 공정에서의 공정변수 별 데이터를 생성합니다."
+    - title: "데이터 전처리/생성조건 입력/시각화"
+      description: "생성에 요구되는 오믹스 데이터의 전처리와
+       복잡한 생성 조건의 입력 및 생성 데이터의 분석 및 시각화 기능을 제공합니다."
+# how_it_works:
+#   heading: "작동 방식"
+#   description: "원천 데이터에서 후보 우선순위까지, 최소 3단계로 진행합니다."
+#   steps:
+#     - title: "준비 및 설정"
+#       description: "데이터셋과 기준 조건을 정하고 섭동할 유전자/단백질을 선택합니다."
+#     - title: "생성 및 점검"
+#       description: "모델 실행 후 가상 오믹스 결과, 마커 변화, 신뢰 신호를 확인합니다."
+#     - title: "우선순위 및 공유"
+#       description: "효과와 일관성을 기준으로 후보를 정렬하고 팀 검토용으로 내보냅니다."
 how_it_works:
   heading: "작동 방식"
-  description: "원천 데이터에서 후보 우선순위까지, 최소 3단계로 진행합니다."
+  # description: "업로드부터 결과 해석까지, 핵심 흐름을 간단하게 구성했습니다."
   steps:
-    - title: "준비 및 설정"
-      description: "데이터셋과 기준 조건을 정하고 섭동할 유전자/단백질을 선택합니다."
-    - title: "생성 및 점검"
-      description: "모델 실행 후 가상 오믹스 결과, 마커 변화, 신뢰 신호를 확인합니다."
-    - title: "우선순위 및 공유"
-      description: "효과와 일관성을 기준으로 후보를 정렬하고 팀 검토용으로 내보냅니다."
-
+    - title: "참조 오믹스 데이터 선택"
+      description: "기 전처리된 데이터를 선택하거나 '가져오기', '업로드' 등의 방법으로 신규 데이터의 업로드가 가능합니다."
+    - title: "조건별 데이터 생성"
+      description: "사용자가 입력한 조건에 따라, 학습 데이터에 없는 오믹스 데이터를 가상으로 생성합니다. (타겟 억제·시점 확장·약물 투여 조건 등)"
+    - title: "비교·분석·검증 및 활용"
+      description: "가상으로 생성된 데이터를 시각화하고 조건 간 결과를 비교·분석하여, 후속 검증 실험, 근거 생성 연구, 임상 및 공정 조건 최적화 등에 활용합니다."
+# collaboration:
+#   heading: "협업 연구를 위한 구조"
+#   description: "KnockG는 계산생물학 팀, 실험팀, 외부 파트너 간 협업 워크플로를 지원합니다."
+#   points:
+#     - "하나의 시뮬레이션 문제 정의로 팀 정렬"
+#     - "일관된 모델 출력으로 타깃 근거 검토"
+#     - "in silico 후보군에서 실험 계획으로 자연스럽게 전환"
+#   cta:
+#     heading: "실전 예시 확인"
+#     description: "활용 시나리오와 예상 출력 형태를 확인하세요."
+#     label: "예제 보기"
+#     url: "/examples/"
 collaboration:
-  heading: "협업 연구를 위한 구조"
-  description: "KnockG는 계산생물학 팀, 실험팀, 외부 파트너 간 협업 워크플로를 지원합니다."
+  heading: "타 AI와 함께 사용가능한 구조"
+  description: "KnockG는 웹 애플리케이션, API, MCP 형태로 제공되어 구조 기반 AI 및 오믹스 AI와 연동해 사용할 수 있는 데이터 생성·증강 레이어입니다."
   points:
-    - "하나의 시뮬레이션 문제 정의로 팀 정렬"
-    - "일관된 모델 출력으로 타깃 근거 검토"
-    - "in silico 후보군에서 실험 계획으로 자연스럽게 전환"
+    - "비전문가도 활용 가능한 직관적인 웹 기반 인터페이스 제공"
+    - "API 및 MCP를 통해 다양한 AI 시스템과의 연동 지원"
+    - "타겟 탐색부터 전임상·임상 단계 별 기능으로 구조 AI와 연계"
+    - "판별형 오믹스 AI에 가상 입력 데이터(미래 시점·코호트 등)를 제공해 분석 성능 확장"
   cta:
-    heading: "실전 예시 확인"
-    description: "활용 시나리오와 예상 출력 형태를 확인하세요."
-    label: "예제 보기"
-    url: "/examples/"
+    heading: "활용 예시 확인"
+    description: "질환 연구와 공정 최적화 사례를 간단히 살펴보세요."
+    label: "예시 보기"
+    url: "/examples/"    
 
 get_started:
   hero:
@@ -225,110 +286,175 @@ docs_nav:
 
 docs_overview:
   heading: "문서"
-  description: "시작하기부터 확인한 뒤, 개념 → 조건 명세 → API 순서로 구현 세부사항을 살펴보세요."
+  description: "처음에는 웹 앱에서 첫 실행 흐름을 익히고, 이후 개념 → 조건 명세 → API 순서로 재현 가능한 분석 흐름을 정리해 보세요."
   cards:
     - title: "시작하기"
-      summary: "첫 실행 체크리스트와 워크플로 설정."
+      summary: "첫 실행 체크리스트, 데이터 준비 사항, 결과 확인 포인트를 안내합니다."
       url: "/docs/getting-started/"
     - title: "개념"
-      summary: "섭동 시뮬레이션의 핵심 개념."
+      summary: "오믹스 파운데이션 모델, 조건 기반 생성, 출력 해석의 공통 언어를 정리합니다."
       url: "/docs/concepts/"
     - title: "조건 명세"
-      summary: "시뮬레이션 입력을 재현 가능한 형식으로 정의."
+      summary: "시뮬레이션 입력을 반복 가능하고 공유 가능한 형식으로 정의합니다."
       url: "/docs/condition-spec/"
     - title: "API"
-      summary: "엔드포인트 개요와 요청 예시."
+      summary: "자동화 연동을 위한 요청 구조와 최소 호출 예시를 제공합니다."
       url: "/docs/api/"
 
 docs_pages:
   docs_getting_started:
     heading: "시작하기"
-    intro: "이 페이지를 따라 첫 시뮬레이션을 실행하고, 출력 품질을 빠르게 검증할 수 있습니다."
+    intro: "이 페이지를 따라가면 첫 조건 기반 생성 실행을 완료하고, 생성 결과가 연구 질문에 맞는지 빠르게 점검할 수 있습니다."
     sections:
       - type: h3
-        text: "체크리스트"
+        text: "이 문서가 다루는 범위"
+      - type: p
+        text: "웹 앱에서 첫 프로젝트를 만들고, 조건을 설정한 뒤, 생성 결과를 검토하고 내보내는 최소 흐름을 설명합니다. 빠른 탐색은 웹에서 시작하고, 반복 실행이나 내부 파이프라인 연동이 필요해지면 API로 확장하는 것을 권장합니다."
+      - type: h3
+        text: "시작 전 체크리스트"
       - type: ul
         items:
-          - "baseline과 treated 조건을 포함한 데이터셋이 준비되어 있습니다."
-          - "섭동할 타깃 유전자 또는 단백질이 선정되어 있습니다."
-          - "첫 실행 성공 기준(지표/마커 등)이 정의되어 있습니다."
+          - "분석하려는 질문이 정리되어 있습니다. 예: 특정 타겟 녹다운 시 질환 진행이 완화되는가, 특정 배양조건에서 생산성이 높아지는가."
+          - "참조할 데이터셋 또는 사용할 생성 모델이 준비되어 있습니다."
+          - "비교할 조건이 정의되어 있습니다. 예: baseline vs treated, control vs knockdown, 초기 vs 후기 시점."
+          - "처음 확인할 마커, 지표, 또는 후보 우선순위 기준이 정리되어 있습니다."
+          - "결과를 누구와 어떻게 검토할지 정해져 있습니다. 예: 팀 미팅용 요약, 후속 실험 후보 리스트, 보고서 공유."
       - type: h3
         text: "첫 실행 흐름"
       - type: ol
         items:
-          - "새 시뮬레이션을 생성하고 섭동 모드를 선택합니다."
-          - "조건 파라미터와 선택된 타깃을 설정합니다."
-          - "실행 후 마커 수준 변화를 확인하고 요약을 내보냅니다."
+          - "새 프로젝트 또는 시뮬레이션을 생성하고, 사용할 데이터셋 또는 모델을 선택합니다."
+          - "비교 기준이 되는 조건과 생성하려는 조건을 정합니다."
+          - "타겟, 시점, 세포유형, 질환 맥락, 배양 또는 투여 조건 등 필요한 입력값을 설정합니다."
+          - "실행 후 생성된 오믹스 결과와 마커 변화, 후보 우선순위, 요약 신호를 확인합니다."
+          - "필요한 결과를 저장하거나 내보내고, 후속 실험 또는 추가 분석 항목을 정리합니다."
+      - type: h3
+        text: "첫 실행에서 우선 확인할 것"
+      - type: ul
+        items:
+          - "핵심 마커의 변화 방향이 연구 가설과 크게 어긋나지 않는지 확인합니다."
+          - "조건 간 차이가 충분히 분리되어 해석 가능한지 검토합니다."
+          - "상위 후보가 알려진 생물학적 근거나 기존 문헌과 어느 정도 정합적인지 살펴봅니다."
+          - "실제 실험으로 바로 검증할 후보 수를 좁힐 수 있는지 확인합니다."
+      - type: h3
+        text: "웹 앱으로 시작하고 API로 확장하기"
+      - type: p
+        text: "웹 앱은 탐색과 협업 검토에 적합하고, API는 반복 가능하고 스크립트 기반의 자동화 실행에 적합합니다. 첫 실행은 웹 앱에서 맥락을 확인하고, 이후 동일한 구조를 API 요청으로 옮기면 팀 내 재현성을 높이기 좋습니다."
       - type: alert_next
-        prefix: "다음: 팀 내 해석을 맞추기 위해 "
+        prefix: "다음: 팀 내 해석 기준을 맞추기 위해 "
         link_label: "개념"
         url: "/docs/concepts/"
-        suffix: "을 읽어보세요."
+        suffix: "을 먼저 정리해 보세요."
 
   docs_concepts:
     heading: "개념"
-    intro: "설계, 실행, 리뷰에서 공통으로 사용할 용어를 정리합니다."
+    intro: "설계, 실행, 리뷰 과정에서 같은 의미로 사용할 핵심 용어를 정리합니다."
     sections:
       - type: h3
-        text: "섭동 모드(Perturbation Mode)"
-      - type: p_html
-        html: "시뮬레이션에서 타깃을 어떻게 변경하는지 정의합니다. 대표 모드는 <code>knockdown</code>, <code>activation</code>입니다."
-      - type: h3
-        text: "조건(Condition)"
+        text: "오믹스 파운데이션 모델(Omics Foundation Model)"
       - type: p
-        text: "타깃 효과를 추정하는 실험 맥락(예: control vs treated)을 의미합니다."
+        text: "오믹스 파운데이션 모델은 유전자·단백질 발현량과 같은 오믹스 데이터를 조건에 맞게 가상으로 생성하는 생성형 인공지능입니다. 실제 실험 전에 다양한 조건을 빠르게 검토해 가설을 좁히고, 더 유망한 실험에 자원을 집중할 수 있도록 돕습니다."
+      - type: h3
+        text: "조건 기반 생성(Condition-driven Generation)"
+      - type: p
+        text: "생성 결과는 단일 타겟이나 단일 라벨만으로 정해지지 않습니다. 질환 맥락, 세포유형, 시점, 유전형, 투여 또는 배양 조건처럼 연구자가 지정한 조건 조합이 함께 반영됩니다."
+      - type: h3
+        text: "대표 생성 시나리오"
+      - type: ul
+        items:
+          - "<code>knockdown</code>: 특정 유전자 또는 단백질이 억제된 조건의 데이터를 생성합니다."
+          - "시계열 생성: 학습 데이터에 없는 중간 시점이나 미래 시점의 데이터를 생성합니다."
+          - "투여·배양 조건 생성: 약물, 처리 조건, 배양 환경 변화에 따른 데이터를 생성합니다."
+      - type: h3
+        text: "기준 조건(Baseline)과 비교 조건(Condition)"
+      - type: p
+        text: "기준 조건은 현재 상태나 비교의 출발점이고, 비교 조건은 생성하려는 목표 상황입니다. 예를 들어 control 대비 knockdown, 정상 대비 질환, 기본 배양조건 대비 최적화 조건처럼 정의할 수 있습니다."
       - type: h3
         text: "출력 해석(Output Interpretation)"
       - type: ul
         items:
-          - "효과 크기와 일관성으로 후보를 우선순위화합니다."
-          - "생물학적 근거에 맞춰 마커 수준 반응을 검토합니다."
-          - "내보낸 결과를 후속 랭킹/실험 계획에 활용합니다."
+          - "마커 변화: 개별 마커나 패널 수준에서 방향성과 크기를 확인합니다."
+          - "조건 분리: 생성 결과가 서로 다른 조건을 충분히 구분하는지 살펴봅니다."
+          - "후보 우선순위화: 효과 크기, 일관성, 기존 생물학적 근거를 함께 고려합니다."
+          - "후속 실험 연결: 내보낸 결과를 랭킹, 검증 실험 설계, 보고서 작성에 활용합니다."
+      - type: h3
+        text: "Pseudo-blotting과 후보 검토"
+      - type: p_html
+        html: "Lite.KnockG에서는 <code>pseudo-blotting</code>처럼 특정 타겟 녹다운 시의 마커 발현량 변화를 빠르게 확인할 수 있고, 상위 버전에서는 신규 모델 학습, 시계열 구성, 다중 타겟 분석, 문헌·특허 조회, 네트워크 분석 등 더 넓은 검토가 가능합니다."
+      - type: h3
+        text: "In silico 검토와 실험 검증"
+      - type: p
+        text: "KnockG의 목적은 웻랩을 대체하는 것이 아니라, 실제 실험 전에 가능한 조건을 더 넓게 탐색하고 유망한 후보를 더 좁혀 실험의 시간과 비용을 줄이는 것입니다."
       - type: alert_next
-        prefix: "다음: 재현 가능한 입력을 위해 "
+        prefix: "다음: 재현 가능한 입력을 만들려면 "
         link_label: "조건 명세"
         url: "/docs/condition-spec/"
-        suffix: "를 정의하세요."
+        suffix: "를 정리하세요."
 
   docs_condition_spec:
     heading: "조건 명세(Condition Spec)"
-    intro: "조건 명세는 시뮬레이션 요청을 안정적이고 반복 가능한 구조로 정의합니다."
+    intro: "조건 명세는 어떤 질문을 어떤 조건으로 실행했는지 기록하는 최소 단위입니다. 잘 정의된 조건 명세는 반복 실행, 팀 공유, 결과 비교를 훨씬 쉽게 만듭니다."
     sections:
+      - type: h3
+        text: "왜 필요한가요?"
+      - type: p
+        text: "같은 타겟이라도 질환 맥락, 세포유형, 시점, 투여 조건이 달라지면 결과 해석이 완전히 달라질 수 있습니다. 조건 명세는 실행 맥락을 함께 보존해 결과를 다시 재현하고 비교할 수 있도록 합니다."
       - type: h3
         text: "필수 필드"
       - type: ul
         items:
-          - "<code>dataset_id</code>: 준비된 데이터 식별자"
-          - "<code>mode</code>: <code>knockdown</code> 등 섭동 모드"
-          - "<code>targets</code>: 섭동할 유전자/단백질 목록"
+          - "<code>dataset_id</code>: 준비된 데이터 또는 모델의 식별자"
+          - "<code>mode</code>: 실행 유형 예: <code>knockdown</code>"
+          - "<code>targets</code>: 섭동하거나 비교할 유전자/단백질 목록"
           - "<code>condition</code>: 시나리오를 구분하는 조건 라벨"
+      - type: h3
+        text: "권장 메타데이터"
+      - type: ul
+        items:
+          - "기준 조건 이름 예: control, untreated, baseline"
+          - "질환 또는 코호트 정보 예: ALS, NSCLC, sporadic, responder"
+          - "세포유형 또는 조직 정보 예: motor_neuron, hepatocyte, CHO"
+          - "시점 정보 예: early, mid, late, d18"
+          - "약물·배양·투여 맥락 예: dose, medium, growth factor, oxygen"
+          - "주요 readout 예: marker_panel, candidate_ranking, export_summary"
+      - type: h3
+        text: "조건 라벨 작성 팁"
+      - type: ul
+        items:
+          - "짧지만 구분 가능한 이름을 사용합니다."
+          - "질환/세포유형/시점/처리 조건이 섞여 있다면 일정한 순서로 적습니다."
+          - "팀 내에서 같은 의미를 같은 단어로 쓰도록 규칙을 맞춥니다."
       - type: h3
         text: "예시 스펙"
       - type: pre
         code: |
           {
-            "dataset_id": "ds_example_001",
+            "dataset_id": "ds_als_motor_neuron_v1",
             "mode": "knockdown",
             "targets": ["GENE_A", "GENE_B"],
-            "condition": "treated"
+            "condition": "sporadic_motor_neuron_d18"
           }
+      - type: h3
+        text: "해석 예시"
+      - type: p
+        text: "위 스펙은 ALS의 sporadic 코호트, motor neuron, d18 맥락에서 특정 타겟 녹다운 조건을 생성·비교하기 위한 최소 요청 예시로 볼 수 있습니다. 실제 운영에서는 기준 조건 이름, 마커 패널, 내보내기 형식 같은 메타데이터를 함께 관리하면 더 유용합니다."
       - type: alert_next
         mt5: true
-        prefix: "다음: 엔드포인트 호출은 "
+        prefix: "다음: 스크립트 기반 호출은 "
         link_label: "API"
         url: "/docs/api/"
         suffix: "에서 확인하세요."
 
   docs_api:
     heading: "API"
-    intro: "반복 가능하고 스크립트 기반의 시뮬레이션 실행에는 API를 사용하세요."
+    intro: "반복 가능한 실행, 노트북 연동, 내부 파이프라인 자동화에는 API를 사용하세요. 아래는 현재 홈페이지 문서용 초안 예시이며, 실제 배포 버전의 상세 필드는 제품 릴리즈에 맞춰 확정하는 것이 좋습니다."
     sections:
       - type: h3
         text: "인증(Authentication)"
       - type: p_html
         html: "<code>Authorization</code> 헤더에 <code>Bearer &lt;YOUR_API_KEY&gt;</code> 형태로 API 키를 전달합니다."
       - type: h3
-        text: "엔드포인트(Endpoint)"
+        text: "기본 엔드포인트"
       - type: ul
         items:
           - "<code>POST /v1/simulations</code>: 시뮬레이션 요청 생성 및 실행"
@@ -346,6 +472,14 @@ docs_pages:
               "condition": "treated"
             }'
       - type: h3
+        text: "요청 본문에서 자주 다루는 값"
+      - type: ul
+        items:
+          - "<code>dataset_id</code>: 사용할 데이터셋 또는 모델"
+          - "<code>mode</code>: 실행 유형 예: <code>knockdown</code>"
+          - "<code>targets</code>: 섭동 대상 목록"
+          - "<code>condition</code>: 비교할 조건 또는 시나리오 라벨"
+      - type: h3
         text: "응답 형식(Response shape)"
       - type: pre
         code: |
@@ -356,7 +490,17 @@ docs_pages:
               "top_candidates": ["GENE_A", "GENE_B"]
             }
           }
-
+      - type: h3
+        text: "응답 해석"
+      - type: ul
+        items:
+          - "<code>simulation_id</code>: 실행을 추적하거나 재조회할 때 사용하는 식별자"
+          - "<code>status</code>: 실행 상태"
+          - "<code>summary</code>: 빠른 검토를 위한 핵심 결과 요약"
+      - type: h3
+        text: "웹 앱과 API를 함께 쓰는 방법"
+      - type: p
+        text: "처음에는 웹 앱에서 조건을 조정하며 출력 해석 감각을 익히고, 이후 자주 반복하는 요청을 API로 옮기면 팀 내 표준화와 자동화 수준을 높일 수 있습니다."
 
 
 # value_props:
@@ -381,27 +525,46 @@ docs_pages:
 #     - title: "분석 및 내보내기"
 #       description: "결과를 검토하고 연구에 활용합니다."
 
+# features:
+#   section_title: "유용한 기능들"
+#   main_title: "실험 없이 결과 오믹스 데이터를 생성"
+#   main_description: "웹 어플리케이션을 통해 생성 인공지능의 학습 및 활용이 가능하여 손쉽게, 즉각적으로 연구과정을 혁신할 수 있습니다."
+#   feature_1_title: "시계열 데이터 생성"
+#   feature_1_description: "t<sub>0</sub>, t<sub>5</sub> 시점의 학습 데이터로 t<sub>1</sub>, t<sub>2</sub>, t<sub>3</sub>의 중간 시점의 오믹스 데이터나 t<sub>10</sub>, t<sub>15</sub> 등의 미래 시점의 오믹스 데이터를 생성합니다."
+#   feature_2_title: "타겟 녹다운/활성화 데이터 생성"
+#   feature_2_description: "특정 유전자/단백질 타겟의 녹다운/활성화 시의 데이터를 생성, 다양한 분석에 활용합니다."
+#   feature_3_title: "신규 타겟 및 후보물질 탐색"
+#   feature_3_description: "생성 데이터의 비교/분석으로 질환 및 생명현상의 신규 타겟을 탐색, 문헌/약물/특허 정보가 함께 제공됩니다."  
 features:
-  section_title: "유용한 기능들"
-  main_title: "실험 없이 결과 오믹스 데이터를 생성"
-  main_description: "웹 어플리케이션을 통해 생성 인공지능의 학습 및 활용이 가능하여 손쉽게, 즉각적으로 연구과정을 혁신할 수 있습니다."
+  section_title: "핵심 기능"
+  main_title: "실험 전에 더 많은 가능성을 검토하세요"
+  main_description: "KnockG는 조건별 오믹스 데이터를 생성하고 비교·분석하여, 실제 실험 전에 더 나은 후보와 방향을 좁히도록 돕습니다."
   feature_1_title: "시계열 데이터 생성"
-  feature_1_description: "t<sub>0</sub>, t<sub>5</sub> 시점의 학습 데이터로 t<sub>1</sub>, t<sub>2</sub>, t<sub>3</sub>의 중간 시점의 오믹스 데이터나 t<sub>10</sub>, t<sub>15</sub> 등의 미래 시점의 오믹스 데이터를 생성합니다."
-  feature_2_title: "타겟 녹다운/활성화 데이터 생성"
-  feature_2_description: "특정 유전자/단백질 타겟의 녹다운/활성화 시의 데이터를 생성, 다양한 분석에 활용합니다."
-  feature_3_title: "신규 타겟 및 후보물질 탐색"
-  feature_3_description: "생성 데이터의 비교/분석으로 질환 및 생명현상의 신규 타겟을 탐색, 문헌/약물/특허 정보가 함께 제공됩니다."  
+  feature_1_description: "학습 데이터에 없는 중간·미래 시점의 오믹스 데이터를 생성해 질환 진행과 반응 변화를 살펴봅니다."
+  feature_2_title: "섭동·투여 조건 시뮬레이션"
+  feature_2_description: "유전자 녹다운과 약물·배양 조건 변화 등 다양한 조건의 데이터를 가상으로 생성합니다."
+  feature_3_title: "타겟·후보·공정 탐색"
+  feature_3_description: "생성 결과 비교를 바탕으로 신규 타겟, 후보물질, 최적 조건의 우선순위를 도출합니다."
 
 pricing:
-  section_title: "가격 정책"
-  main_title: "즉각 사용 및 체험이 가능한 가격 정책"
-  main_description: "무료 버전인 lite.knockG를 포함해 KnockG의 경우에도 연구자가 선 분석 진행 후 비 식별화된 결과물에 대해 데이터 기반 유효성 판단 (pseudo-blotting 등) 후 유료 버전으로 전환 가능합니다."
+  # section_title: "가격 정책"
+  # main_title: "즉각 사용 및 체험이 가능한 가격 정책"
+  # main_description: "무료 버전인 lite.knockG를 포함해 KnockG의 경우에도 연구자가 선 분석 진행 후 비 식별화된 결과물에 대해 데이터 기반 유효성 판단 (pseudo-blotting 등) 후 유료 버전으로 전환 가능합니다."
+  # start_now: "바로 시작하기"
+  # support: "문의 및 지원"
+  # support_via: "via Email"
+  # support_via_full: "Email, Chat & Offline Meeting"
+  # avg_time: "AVG. Time: 48h"
+  # request_quote: "견적 산출하기"
+  section_title: "플랜"
+  main_title: "작게 시작하고, 필요할 때 확장하세요"
+  main_description: "Lite.KnockG로 빠르게 가능성을 확인하고, 더 넓은 조건 탐색과 분석이 필요해지면 KnockG로 확장할 수 있습니다."
   start_now: "바로 시작하기"
   support: "문의 및 지원"
   support_via: "via Email"
   support_via_full: "Email, Chat & Offline Meeting"
   avg_time: "AVG. Time: 48h"
-  request_quote: "견적 산출하기"
+  request_quote: "도입 문의하기"  
   plans:
     basic:
       title: "Lite.KnockG"
@@ -454,6 +617,14 @@ fun_facts:
   screening_count_label: "스크리닝 횟수"
   poc_cases: "11+"
   poc_cases_label: "주요 POC 사례"      
+  models_trained: "250+"
+  models_trained_label: "가입·관심 유저"
+  diseases_applied: "22+"
+  diseases_applied_label: "기업·연구실 리드"
+  screening_count: "6+"
+  screening_count_label: "주요 검증 사례"
+  poc_cases: "3+"
+  poc_cases_label: "공급·계약 기관"  
 
 faq:
   section_title: "FAQ"
