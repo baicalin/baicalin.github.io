@@ -88,50 +88,54 @@ collaboration:
 get_started:
   hero:
     eyebrow: "Get Started"
-    title: "Run your first KnockG workflow in minutes"
-    subtitle: "Start from the web app for rapid exploration, then move to the API when you need repeatable pipelines."
+    title: "Start your first analysis in minutes"
+    subtitle: "Sign up on the web and get started for free. Scale up anytime as your needs grow."
     primary_cta:
       label: "Open Docs"
       url: "/docs/"
     secondary_cta:
-      label: "See Examples"
+      label: "View Examples"
       url: "/examples/"
     side_panel:
-      heading: "MVP Scope"
-      description: "This guide covers setup, first run, and minimal API invocation."
+      heading: "Scope"
+      description: "This guide covers dataset selection, condition setup, and result exploration."
+
   quickstart:
-    heading: "Quickstart"
-    description: "Follow this sequence to go from account setup to first result review."
     steps:
       - kicker: "Step 1"
-        title: "Prepare workspace and dataset"
-        description: "Define your baseline condition, target candidates, and expected comparison outputs."
+        title: "Select a dataset"
+        description: "Search and select an available preprocessed dataset from the top panel in the analysis interface. (<a href='https://www.knockg.com/screenings/new?subcategory=screening'>link</a>)"
+
       - kicker: "Step 2"
-        title: "Run a first perturbation"
-        description: "Use the web interface to configure one scenario and generate initial virtual omics output."
+        title: "Set generation conditions"
+        description: "After selecting a dataset, choose the perturbation or disease context (e.g., breast cancer) and a preset condition (e.g., single target knockdown). (<a href='https://www.knockg.com/screenings/new?subcategory=screening&perturbation=1&preset=1'>link</a>)"
+
       - kicker: "Step 3"
-        title: "Review and export"
-        description: "Inspect marker-level changes, shortlist candidates, and export the run summary."
+        title: "Analyze and export results"
+        description: "Review candidate outputs based on generated data, including marker expression changes and associated literature, patents, and drug information. (<a href='https://www.knockg.com/screenings/1066'>link</a>)"
+
   web_vs_api:
     heading: "Web vs API"
-    description: "Use the interface that matches your stage and team workflow."
+    description: "Choose the interface that fits your workflow."
     web:
-      title: "Web App"
-      description: "Best for exploration and collaborative review."
+      title: "Web Application"
+      description: "Best for fast exploration and collaborative review."
       points:
-        - "Fast setup with guided inputs and visual validation."
-        - "Useful for early target brainstorming sessions."
-        - "Export-ready summaries for non-technical stakeholders."
+        - "Quick start with guided workflows and AI-assisted setup"
+        - "Ideal for early-stage target brainstorming and team discussions"
+        - "Accessible to non-programmers"
+
     api:
       title: "API"
-      description: "Best for automation and reproducible execution."
+      description: "Best for automation and large-scale execution."
       points:
-        - "Integrates with internal pipelines and notebooks."
-        - "Supports standardized parameterized runs."
-        - "Enables batch execution and downstream tooling."
+        - "Easily integrates with internal pipelines and notebook environments"
+        - "Supports standardized, parameter-driven execution"
+        - "Efficient for large-scale data analysis"
+
   code:
-    heading: "Minimal API snippet"
-    description: "Use this minimal request as a starting point for your integration."
+    heading: "API Example"
+    description: "A minimal request example to get started with integration."
     doc_link:
       label: "API Docs"
       url: "/docs/api/"

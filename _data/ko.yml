@@ -143,8 +143,8 @@ collaboration:
 get_started:
   hero:
     eyebrow: "시작하기"
-    title: "몇 분 안에 첫 KnockG 워크플로를 실행해 보세요"
-    subtitle: "빠른 탐색은 웹 앱에서 시작하고, 반복 가능한 파이프라인이 필요해지면 API로 확장하세요."
+    title: "지금 바로 첫 분석을 시작해 보세요"
+    subtitle: "웹에서 회원가입 후 무료로 빠르게 시작하고, 필요할 때 확장할 수 있습니다."
     primary_cta:
       label: "문서 열기"
       url: "/docs/"
@@ -152,43 +152,49 @@ get_started:
       label: "예시 보기"
       url: "/examples/"
     side_panel:
-      heading: "MVP 범위"
-      description: "이 가이드는 설정, 첫 실행, 최소 API 호출까지를 다룹니다."
+      heading: "시작하기 범위"
+      description: "이 가이드는 데이터셋 선택, 생성 조건 입력, 결과물 조회까지를 다룹니다."
 
   quickstart:
-    heading: "빠른 시작"
-    description: "아래 순서대로 진행하면 계정 설정부터 첫 결과 검토까지 빠르게 도달할 수 있습니다."
+    # heading: "빠른 시작"
+    # description: "아래 순서대로 진행하면 계정 설정부터 첫 결과 검토까지 빠르게 도달할 수 있습니다."
     steps:
       - kicker: "Step 1"
-        title: "워크스페이스와 데이터셋 준비"
-        description: "기준 조건(baseline), 후보 타깃, 비교에 사용할 기대 출력(지표/마커)을 정의합니다."
+        title: "데이터셋 선택"
+        description: "분석 화면의 상단 선택 창을 통해 
+         가용한 데이터셋을 검색하고, 기 전처리 된 데이터셋을 선택할 수 있습니다. 
+         (<a href='https://www.knockg.com/screenings/new?subcategory=screening'>링크</a>)"
       - kicker: "Step 2"
-        title: "첫 섭동(perturbation) 실행"
-        description: "웹 인터페이스에서 시나리오 1개를 설정하고 초기 가상 오믹스 결과를 생성합니다."
+        title: "생성 조건 입력"
+        description: "데이터셋 선택 후 탐색할 섭동·질환(예 - breast cancer)과
+         생성 조건 Preset(예 - 단일 타겟 녹다운)을 선택합니다
+         (<a href='https://www.knockg.com/screenings/new?subcategory=screening&perturbation=1&preset=1'>링크</a>)"
       - kicker: "Step 3"
-        title: "검토 및 내보내기"
-        description: "마커 수준 변화를 확인하고 후보군을 추린 뒤, 실행 요약을 내보냅니다."
+        title: "생성 데이터 분석 및 내보내기"
+        description: "생성 데이터 기반의 도출 후보군을 조회하고 각 
+         후보군에서의 주요 마커 발현량 변화, 문헌·특허·약물 정보를 확인할 수 있습니다.
+         (<a href='https://www.knockg.com/screenings/1066'>링크</a>)"
 
   web_vs_api:
     heading: "Web vs API"
-    description: "현재 단계와 팀 워크플로에 맞는 인터페이스를 선택하세요."
+    description: "작업 요건에 맞는 인터페이스를 선택하세요."
     web:
-      title: "웹 앱"
-      description: "탐색과 협업 기반 검토에 최적입니다."
+      title: "웹 어플리케이션"
+      description: "빠른 탐색 및 검토에 최적입니다."
       points:
-        - "가이드 입력과 시각적 검증으로 빠르게 시작할 수 있습니다."
+        - "시작하기 가이드 및 Agent를 통해 빠르게 시작할 수 있습니다."
         - "초기 타깃 브레인스토밍/리뷰 미팅에 유용합니다."
-        - "비기술 이해관계자도 확인 가능한 요약을 내보낼 수 있습니다."
+        - "프로그래밍 비 전문가도 손쉽게 사용할 수 있습니다."
     api:
       title: "API"
-      description: "자동화와 재현 가능한 실행에 최적입니다."
+      description: "자동화와 대용량 실행에 최적입니다."
       points:
         - "내부 파이프라인 및 노트북 환경과 쉽게 연동됩니다."
         - "표준화된 파라미터 기반 실행을 지원합니다."
-        - "배치 실행과 후속 툴링(다운스트림 분석) 확장이 가능합니다."
+        - "대규모 데이터 분석에 효과적입니다."
 
   code:
-    heading: "최소 API 예시"
+    heading: "API 예시"
     description: "연동을 시작할 때 참고할 수 있는 최소 요청 예시입니다."
     doc_link:
       label: "API 문서"
