@@ -453,7 +453,8 @@ docs_pages:
 
   docs_api:
     heading: "API"
-    intro: "반복 가능한 실행, 노트북 연동, 내부 파이프라인 자동화에는 API를 사용하세요. 아래는 현재 홈페이지 문서용 초안 예시이며, 실제 배포 버전의 상세 필드는 제품 릴리즈에 맞춰 확정하는 것이 좋습니다."
+    intro: "대규모 가능한 실행, 노트북 연동, 
+      내부 파이프라인 자동화에는 API를 사용하세요."
     sections:
       - type: h3
         text: "인증(Authentication)"
@@ -465,7 +466,7 @@ docs_pages:
         items:
           - "<code>POST /v1/simulations</code>: 시뮬레이션 요청 생성 및 실행"
       - type: h3
-        text: "최소 요청 예시"
+        text: "Put simulation job"
       - type: pre
         code: |
           curl -X POST "https://api.knockg.com/v1/simulations" \
@@ -476,37 +477,39 @@ docs_pages:
               "mode": "knockdown",
               "targets": ["GENE_A", "GENE_B"],
               "condition": "treated"
+              ...
             }'
+      # - type: h3
+      #   text: "Response"
+      # - type: pre
+      #   code: |
+      #     {
+      #       "simulation_id": "sim_12345",
+      #       "status": "completed",
+      #       "summary": {
+      #         "top_candidates": ["GENE_A", "GENE_B"]
+      #       }
+      #     }
+      # - type: h3
+      #   text: "Web + API workflow"
+      # - type: p
+      #   text: "Explore in the web app, then scale with API for standardized and automated workflows."
+
       - type: h3
-        text: "요청 본문에서 자주 다루는 값"
-      - type: ul
-        items:
-          - "<code>dataset_id</code>: 사용할 데이터셋 또는 모델"
-          - "<code>mode</code>: 실행 유형 예: <code>knockdown</code>"
-          - "<code>targets</code>: 섭동 대상 목록"
-          - "<code>condition</code>: 비교할 조건 또는 시나리오 라벨"
-      - type: h3
-        text: "응답 형식(Response shape)"
+        text: "List available datasets"
+
       - type: pre
-        code: |
-          {
-            "simulation_id": "sim_12345",
-            "status": "completed",
-            "summary": {
-              "top_candidates": ["GENE_A", "GENE_B"]
-            }
-          }
+        code: |        
+          curl -X GET "https://api.knockg.com/v1/datasets?secret=<KNOCKG_API_SECRET>" \
+            -H "Accept: application/json"
+      
       - type: h3
-        text: "응답 해석"
-      - type: ul
-        items:
-          - "<code>simulation_id</code>: 실행을 추적하거나 재조회할 때 사용하는 식별자"
-          - "<code>status</code>: 실행 상태"
-          - "<code>summary</code>: 빠른 검토를 위한 핵심 결과 요약"
-      - type: h3
-        text: "웹 앱과 API를 함께 쓰는 방법"
-      - type: p
-        text: "처음에는 웹 앱에서 조건을 조정하며 출력 해석 감각을 익히고, 이후 자주 반복하는 요청을 API로 옮기면 팀 내 표준화와 자동화 수준을 높일 수 있습니다."
+        text: "List output genes for one screening"
+
+      - type: pre
+        code: |        
+          curl -X GET "https://api.knockg.com/v1/screenings/<SCREENING_ID>/output_genes?secret=<KNOCKG_API_SECRET>" \
+            -H "Accept: application/json"
 
 
 # value_props:
