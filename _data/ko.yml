@@ -217,7 +217,7 @@ example_detail_labels:
 
 examples_gallery:
   heading: "예시"
-  description: "팀이 KnockG를 활용해 가설에서 후보 타겟 리스트로 빠르게 이동하는 실제 워크플로우를 확인하세요."
+  # description: "다양한 활용사례를 확인해 보세요."
   items:
     - title: "타겟 발굴"
       description: "특정 질환 진행을 전제한 시계열 데이터에서 타겟 억제 조건 별 데이터를 생성/비교하는 방식으로 질환의 신규 타겟을 탐색합니다"

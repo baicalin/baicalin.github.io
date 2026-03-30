@@ -156,7 +156,7 @@ example_detail_labels:
   outcome: "Outcome"
 examples_gallery:
   heading: "Examples"
-  description: "See how teams use KnockG to move from hypotheses to prioritized targets in a single workflow."
+  # description: "See how teams use KnockG to move from hypotheses to prioritized targets in a single workflow."
   items:
     - title: "Target Discovery"
       description: "Identify novel targets by generating and comparing perturbation data across disease-relevant conditions."
