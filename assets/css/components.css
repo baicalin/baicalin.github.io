@@ -1,9 +1,10 @@
-.mvp-page section.section-py {
+.mvp-page > .section-py,
+.mvp-page.section-py {
   padding-top: var(--mvp-space-section-y);
   padding-bottom: var(--mvp-space-section-y);
 }
 
-.home-page > section.section-py + section.section-py {
+.home-page > .section-py + .section-py {
   padding-top: calc(var(--mvp-space-section-y) / 2);
   padding-bottom: calc(var(--mvp-space-section-y) / 2);
 }
@@ -14,7 +15,7 @@
   border-bottom: 1px solid var(--mvp-color-border);
 }
 
-.mvp-page section.section-py.mvp-hero {
+.mvp-page > .section-py.mvp-hero {
   padding-bottom: 0;
 }
 
@@ -26,6 +27,10 @@
 
 .mvp-get-started-hero {
   background: linear-gradient(180deg, #f9fbff, #f5f7fb);
+}
+
+.mvp-page > .section-py.mvp-get-started-hero {
+  padding-bottom: 0;
 }
 
 .mvp-hero-subtitle {
@@ -76,12 +81,13 @@
 }
 
 @media (max-width: 767px) {
-  .mvp-page section.section-py {
+  .mvp-page > .section-py,
+  .mvp-page.section-py {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
 
-  .home-page > section.section-py + section.section-py {
+  .home-page > .section-py + .section-py {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
