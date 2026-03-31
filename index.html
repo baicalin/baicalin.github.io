@@ -1,14 +1,15 @@
 ---
-layout: default
-lang: en
+layout: marketing
+enable_channeltalk: true
+title: Home
+description: Build gene perturbation hypotheses faster with KnockG.
+sections:
+  - type: HeroSection
+  - type: ValuePropsSection
+  - type: HowItWorksSection
+  - type: CollaborationSection
 ---
 
-{% include landing-hero.html %}
-{% include landing-features.html %}
-<!-- include landing-reviews.html -->
-<!-- include landing-team.html -->
-{% include landing-pricing.html %}
-{% include landing-funfacts.html %}
-{% include landing-faq.html %}
-{% include landing-CTA.html %}
-{% include landing-contact.html %}
+{% for section in page.sections %}
+  {% include components/SectionRenderer.html section=section %}
+{% endfor %}

@@ -1,0 +1,26 @@
+{% assign lang = site.active_lang %}
+{% assign t = site.data[lang] %}
+
+{% case include.section.type %}
+  {% when "HeroSection" %}
+    {% include components/HeroSection.html t=t %}
+  {% when "ValuePropsSection" %}
+    {% include components/ValuePropsSection.html t=t %}
+  {% when "HowItWorksSection" %}
+    {% include components/HowItWorksSection.html t=t %}
+  {% when "CollaborationSection" %}
+    {% include components/CollaborationSection.html t=t %}
+
+  {% when "GetStartedHeroSection" %}
+    {% include components/GetStartedHeroSection.html t=t %}
+  {% when "GetStartedQuickstartSection" %}
+    {% include components/GetStartedQuickstartSection.html t=t %}
+  {% when "GetStartedWebVsApiSection" %}
+    {% include components/GetStartedWebVsApiSection.html t=t %}
+  {% when "GetStartedCodeSection" %}
+    {% include components/GetStartedCodeSection.html t=t %}
+
+  {% when "ExamplesGallerySection" %}
+    {% include components/ExamplesGallerySection.html t=t %}
+
+{% endcase %}

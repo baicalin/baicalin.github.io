@@ -1,0 +1,49 @@
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign key = include.doc_key | default: page.doc_key %}
+{% assign doc = t.docs_pages[key] %}
+
+{% if doc %}
+  <h1 class="mb-3">{{ doc.heading }}</h1>
+  {% if doc.intro %}<p class="mb-5">{{ doc.intro }}</p>{% endif %}
+
+  {% if doc.sections %}
+    {% for s in doc.sections %}
+      {% case s.type %}
+
+        {% when "h3" %}
+          <h3 class="mb-3">{{ s.text }}</h3>
+
+        {% when "p" %}
+          <p class="mb-4">{{ s.text }}</p>
+
+        {% when "p_html" %}
+          <p class="mb-4">{{ s.html }}</p>
+
+        {% when "ul" %}
+          <ul class="mb-5">
+            {% for item in s.items %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+
+        {% when "ol" %}
+          <ol class="mb-5">
+            {% for item in s.items %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ol>
+
+        {% when "pre" %}
+          <pre style="padding: 10px;"><code>{{ s.code | escape }}</code></pre>
+
+        {% when "alert_next" %}
+          <div class="alert alert-primary{% if s.mt5 %} mt-5{% endif %}" role="alert">
+            {{ s.prefix }}
+            <a href="{{ s.url | relative_url }}" class="alert-link">{{ s.link_label }}</a>
+            {{ s.suffix }}
+          </div>
+
+      {% endcase %}
+    {% endfor %}
+  {% endif %}
+{% endif %}

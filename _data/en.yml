@@ -1,11 +1,482 @@
-title: "SilicoPharm, Inc"
+title: "SilicoPharm Inc."
 toggle: "KOR"
-toggle_href: "/index.ko.html"
+toggle_href: "/index.html"
+
+nav:
+  home: "Home"
+  get_started: "Get Started"
+  docs: "Docs"
+  examples: "Examples"
+
+not_found:
+  eyebrow: "404"
+  title: "Page Not Found"
+  description: "The page you are looking for may not exist or the URL may be incorrect."
+  primary_cta:
+    label: "Go to Home"
+    url: "/"
+  secondary_cta:
+    label: "View Docs"
+    url: "/docs/"
 
 hero:
-  title: "Bridging Life Sciences and AI"
-  subtitle: "KnockG<sup>TM</sup>, SilicoPharm's AI Omics Generation Solution, accelerates research in basic, medical, and pharmaceutical fields by generating virtual experimental results at low cost and high efficiency."
-  button_text: "Try the free version now"
+  eyebrow: "KnockG"
+  title: "Generate and leverage virtual experimental, diagnostic, and clinical data"
+  subtitle: "KnockG<sup>TM</sup>, SilicoPharm’s omics foundation model solution, generates and analyzes virtual omics data for experimental, diagnostic, and clinical scenarios based on user-defined conditions. Researchers and clinicians can leverage this to discover novel targets, optimize clinical strategies, and improve bioprocesses such as cell therapy manufacturing."
+  button_text: "Get Started for Free"
+
+  primary_cta:
+    label: "Start Now"
+    url: "/get-started/"
+  secondary_cta:
+    label: "View Docs"
+    url: "/docs/"
+  badges:
+    - "Web Application"
+    - "Time-series & condition-specific omics data generation"
+    - "Validated in oncology and neurodegenerative diseases"
+    - "Proven PoC cases with innovative drug companies"
+  panel_heading: "Key Capabilities"
+  # panel_points:
+  #   - "Automated preprocessing of public and uploaded omics datasets"
+  #   - "Condition-driven virtual data generation (target perturbation, single/combination drug treatment, etc.)"
+  #   - "Generation of missing timepoints (intermediate or future states)"
+  #   - "Pseudo-experimental outputs (e.g., blotting) for pre-experimental validation"
+  #   - "Ranking of effective conditions with integrated literature and drug database search"
+  panel_points:
+    - "Automated preprocessing of public & uploaded omics data"
+    - "Target perturbation simulation"
+    - "Drug & combination simulation"
+    - "Timepoint expansion (intermediate & future)"
+    - "Pseudo-experimental outputs"
+    - "Ranking & knowledge integration (literature, drugs, patents)"
+value_props:
+  heading: "Why KnockG"
+  description: "KnockG is designed with an automated pipeline that enables life science researchers—even without programming expertise—to generate and analyze omics data. By exploring virtual conditions in silico, users can reduce time and cost in experiments and clinical studies while enabling evidence-generating research."
+  items:
+    - title: "Virtual generation of hard-to-obtain data"
+      description: "Generate data for conditions or samples that are difficult or impossible to obtain due to ethical, practical, or rarity constraints."
+    - title: "Simulation of experimental and clinical outcomes"
+      description: "Generate unseen data such as target perturbation experiments, cohort-specific clinical responses, and process-variable conditions in cell culture and manufacturing."
+    - title: "End-to-end data workflow"
+      description: "Provides preprocessing, condition configuration, analysis, and visualization of generated omics data in a unified workflow."
+
+how_it_works:
+  heading: "How It Works"
+  steps:
+    - title: "Select reference omics data"
+      description: "Use preprocessed dataset, import from public database or upload your own dataset."
+    - title: "Generate condition-specific data"
+      description: "Create virtual omics data for conditions not present in training data based on user-defined inputs (e.g., target perturbation, timepoint extension, drug treatment)."
+    - title: "Analyze and apply results"
+      description: "Visualize generated data and compare conditions to support validation experiments, evidence generation, and optimization of clinical or process conditions."
+
+collaboration:
+  heading: "Designed for AI Ecosystem Integration"
+  description: "KnockG is provided as a web application, API, and MCP, serving as a data generation and augmentation layer that integrates seamlessly with structure-based AI and omics AI systems."
+  points:
+    - "Intuitive web interface accessible to non-programmers"
+    - "Seamless integration with external AI systems via API and MCP"
+    - "Supports workflows from target discovery to preclinical and clinical stages alongside structure-based AI"
+    - "Enhances predictive omics AI by providing virtual input data (e.g., future timepoints, cohorts)"
+  cta:
+    heading: "Explore Use Cases"
+    description: "Discover applications in target discovery, clinical research, and bioprocess optimization."
+    label: "View Examples"
+    url: "/examples/"
+
+get_started:
+  hero:
+    eyebrow: "Get Started"
+    title: "Start your first analysis in minutes"
+    subtitle: "Sign up on the web and get started for free. Scale up anytime as your needs grow."
+    primary_cta:
+      label: "Open Docs"
+      url: "/docs/"
+    secondary_cta:
+      label: "View Examples"
+      url: "/examples/"
+    side_panel:
+      heading: "Scope"
+      description: "This guide covers dataset selection, condition setup, and result exploration."
+
+  quickstart:
+    steps:
+      - kicker: "Step 1"
+        title: "Select a dataset"
+        description: "Search and select an available preprocessed dataset from the top panel in the analysis interface. (<a href='https://www.knockg.com/screenings/new?subcategory=screening'>link</a>)"
+
+      - kicker: "Step 2"
+        title: "Set generation conditions"
+        description: "After selecting a dataset, choose the perturbation or disease context (e.g., breast cancer) and a preset condition (e.g., single target knockdown). (<a href='https://www.knockg.com/screenings/new?subcategory=screening&perturbation=1&preset=1'>link</a>)"
+
+      - kicker: "Step 3"
+        title: "Analyze and export results"
+        description: "Review candidate outputs based on generated data, including marker expression changes and associated literature, patents, and drug information. (<a href='https://www.knockg.com/screenings/1066'>link</a>)"
+
+  web_vs_api:
+    heading: "Web vs API"
+    description: "Choose the interface that fits your workflow."
+    web:
+      title: "Web Application"
+      description: "Best for fast exploration and collaborative review."
+      points:
+        - "Quick start with guided workflows and AI-assisted setup"
+        - "Ideal for early-stage target brainstorming and team discussions"
+        - "Accessible to non-programmers"
+
+    api:
+      title: "API"
+      description: "Best for automation and large-scale execution."
+      points:
+        - "Easily integrates with internal pipelines and notebook environments"
+        - "Supports standardized, parameter-driven execution"
+        - "Efficient for large-scale data analysis"
+
+  code:
+    heading: "API Example"
+    description: "A minimal request example to get started with integration."
+    doc_link:
+      label: "API Docs"
+      url: "/docs/api/"
+    snippet: |
+      curl -X POST "https://api.knockg.com/v1/simulations" \
+        -H "Authorization: Bearer <YOUR_API_KEY>" \
+        -H "Content-Type: application/json" \
+        -d '{
+          "dataset_id": "ds_example_001",
+          "mode": "knockdown",
+          "targets": ["GENE_A", "GENE_B"],
+          "condition": "treated"
+        }'
+
+example_detail_labels:
+  problem: "Problem"
+  approach: "Approach"
+  outcome: "Outcome"
+examples_gallery:
+  heading: "Examples"
+  # description: "See how teams use KnockG to move from hypotheses to prioritized targets in a single workflow."
+  items:
+    - title: "Target Discovery"
+      description: "Identify novel targets by generating and comparing perturbation data across disease-relevant conditions."
+      image: "/assets/img/examples/example_01.svg"
+
+    - title: "Virtual Experiments (Pseudo-blotting)"
+      description: "Predict marker expression changes under selected conditions before running wet-lab experiments."
+      image: "/assets/img/examples/example_02.svg"
+
+    - title: "Virtual Experiments (Pseudo-flow cytometry)"
+      description: "Simulate flow cytometry-like outputs to evaluate cellular responses under defined conditions."
+      image: "/assets/img/examples/example_03.svg"
+
+    - title: "Integrated Knowledge (Literature, Drugs, Patents)"
+      description: "Explore built-in knowledge sources and connect with private datasets for deeper insights."
+      image: "/assets/img/examples/example_04.svg"
+# examples_gallery:
+#   heading: "Examples"
+#   description: "Browse practical workflows that show how teams use KnockG to move from hypothesis to candidate shortlists."
+#   items:
+#     - title: "Target Discovery"
+#       description: "Prioritize candidate genes by simulating perturbation outcomes across a disease context."
+#       image: "/assets/img/examples/example_01.svg"
+#       url: "/examples/target-discovery/"
+#       cta_label: "View Example"
+
+#     - title: "Marker Validation"
+#       description: "Check whether virtual marker shifts align with biological expectations before committing to experiments."
+#       image: "/assets/img/examples/example_02.svg"
+#       url: "/examples/marker-validation/"
+#       cta_label: "View Example"
+
+#     - title: "Candidate Ranking"
+#       description: "Compare multiple perturbation runs and rank targets by effect size, consistency, and confidence signals."
+#       image: "/assets/img/examples/example_03.svg"
+#       url: "/examples/candidate-ranking/"
+#       cta_label: "View Example"
+
+#     - title: "Candidate Ranking"
+#       description: "Compare multiple perturbation runs and rank targets by effect size, consistency, and confidence signals."
+#       image: "/assets/img/examples/example_04.svg"
+#       url: "/examples/candidate-ranking/"
+#       cta_label: "View Example"
+
+#     - title: "Candidate Ranking"
+#       description: "Compare multiple perturbation runs and rank targets by effect size, consistency, and confidence signals."
+#       image: "/assets/img/examples/example_05.svg"
+#       url: "/examples/candidate-ranking/"
+#       cta_label: "View Example"
+
+#     - title: "Candidate Ranking"
+#       description: "Compare multiple perturbation runs and rank targets by effect size, consistency, and confidence signals."
+#       image: "/assets/img/examples/example_06.svg"
+#       url: "/examples/candidate-ranking/"
+#       cta_label: "View Example"
+
+#     - title: "Candidate Ranking"
+#       description: "Compare multiple perturbation runs and rank targets by effect size, consistency, and confidence signals."
+#       image: "/assets/img/examples/example_07.svg"
+#       url: "/examples/candidate-ranking/"
+#       cta_label: "View Example"
+
+examples:
+  target_discovery:
+  example_detail:
+    eyebrow: "Example Detail"
+    title: "Target Discovery"
+    summary: "This example shows how a team can evaluate perturbation hypotheses and narrow down candidate targets before running expensive validation experiments."
+    problem: "The team needs to identify high-confidence intervention candidates from a broad list while reducing wet-lab trial volume."
+    approach_steps:
+      - "Select disease-relevant dataset and define baseline vs treated condition."
+      - "Run knockdown simulations for candidate genes and compare marker responses."
+      - "Rank targets by effect size, consistency, and biological plausibility."
+    outcomes:
+      - "Shortlisted candidate set for follow-up validation."
+      - "Traceable rationale tied to simulation outputs."
+      - "Faster handoff from in silico analysis to experiment planning."
+    next_cta:
+      label: "Read Condition Spec"
+      url: "/docs/condition-spec/"
+
+docs_sidebar:
+  heading: "Docs"
+
+docs_nav:
+  docs_overview: "Overview"
+  docs_getting_started: "Getting Started"
+  docs_concepts: "Concepts"
+  docs_condition_spec: "Condition Spec"
+  docs_api: "API"
+
+docs_overview:
+  heading: "Docs"
+  description: "Start with the web app to learn the basic workflow, then explore Concepts → Condition Spec → API to build reproducible analysis pipelines."
+  cards:
+    - title: "Getting Started"
+      summary: "Checklist, data preparation, and what to look for in your first run."
+      url: "/docs/getting-started/"
+    - title: "Concepts"
+      summary: "Core concepts including omics foundation models, condition-driven generation, and output interpretation."
+      url: "/docs/concepts/"
+    - title: "Condition Spec"
+      summary: "Define simulation inputs in a reproducible and shareable format."
+      url: "/docs/condition-spec/"
+    - title: "API"
+      summary: "Request structure and minimal examples for automation."
+      url: "/docs/api/"
+
+docs_pages:
+  docs_getting_started:
+    heading: "Getting Started"
+    intro: "Follow this guide to run your first condition-driven simulation and quickly evaluate whether the results align with your research question."
+    sections:
+      - type: h3
+        text: "Scope of this guide"
+      - type: p
+        text: "This guide covers the minimum workflow: creating a project in the web app, setting conditions, running a simulation, and reviewing/exporting results. Start in the web app for exploration, and move to the API when you need repeatable execution or pipeline integration."
+      - type: h3
+        text: "Pre-run checklist"
+      - type: ul
+        items:
+          - "Your research question is clearly defined (e.g., does a target knockdown suppress disease progression?)."
+          - "A reference dataset or model is prepared."
+          - "Comparison conditions are defined (e.g., control vs treated, baseline vs knockdown, early vs late timepoints)."
+          - "Initial markers, metrics, or prioritization criteria are defined."
+          - "A plan for reviewing results (team discussion, reports, follow-up experiments) is in place."
+      - type: h3
+        text: "First run workflow"
+      - type: ol
+        items:
+          - "Create a new project or simulation and select a dataset or model."
+          - "Define baseline and target conditions."
+          - "Set inputs such as targets, timepoints, cell types, disease context, and treatment or culture conditions."
+          - "Run the simulation and review generated omics outputs, marker changes, and candidate rankings."
+          - "Export results and define next steps for validation or further analysis."
+      - type: h3
+        text: "What to check first"
+      - type: ul
+        items:
+          - "Do key marker changes align with your hypothesis?"
+          - "Are conditions sufficiently separable for interpretation?"
+          - "Do top candidates align with known biology or literature?"
+          - "Can you narrow down candidates for experimental validation?"
+      - type: h3
+        text: "From Web to API"
+      - type: p
+        text: "Use the web app for exploration and collaboration, and the API for repeatable, automated execution. Start in the web app to understand the context, then replicate the workflow via API for consistency across your team."
+      - type: alert_next
+        prefix: "Next: Align team interpretation by reviewing "
+        link_label: "Concepts"
+        url: "/docs/concepts/"
+        suffix: "."
+
+  docs_concepts:
+    heading: "Concepts"
+    intro: "Define key terms used across design, execution, and review."
+    sections:
+      - type: h3
+        text: "Omics Foundation Model"
+      - type: p
+        text: "An omics foundation model is a generative AI that produces omics data (e.g., gene or protein expression) under specified conditions. It enables rapid exploration of hypotheses before conducting physical experiments."
+      - type: h3
+        text: "Condition-driven Generation"
+      - type: p
+        text: "Outputs are determined by combinations of conditions such as disease context, cell type, timepoint, genotype, and treatment or culture parameters—not just a single target or label."
+      - type: h3
+        text: "Common Generation Scenarios"
+      - type: ul
+        items:
+          - "<code>knockdown</code>: Simulate suppression of a gene or protein"
+          - "Time-series generation: Create intermediate or future timepoints"
+          - "Treatment/culture simulation: Model drug or environmental conditions"
+      - type: h3
+        text: "Baseline vs Condition"
+      - type: p
+        text: "The baseline represents the reference state, while conditions define the scenario to be generated (e.g., control vs knockdown, healthy vs disease)."
+      - type: h3
+        text: "Output Interpretation"
+      - type: ul
+        items:
+          - "Marker changes: direction and magnitude"
+          - "Condition separation: distinguishability across scenarios"
+          - "Candidate prioritization: effect size, consistency, biological plausibility"
+          - "Downstream use: validation design, ranking, reporting"
+      - type: h3
+        text: "Pseudo-blotting & Candidate Review"
+      - type: p_html
+        html: "Lite.KnockG provides quick inspection of marker changes via <code>pseudo-blotting</code>. Advanced versions support model training, time-series analysis, multi-target simulation, and integrated literature/patent/network analysis."
+      - type: h3
+        text: "In silico vs Wet-lab"
+      - type: p
+        text: "KnockG complements wet-lab experiments by enabling broader exploration of conditions and narrowing down candidates before physical validation."
+      - type: alert_next
+        prefix: "Next: Define reproducible inputs in "
+        link_label: "Condition Spec"
+        url: "/docs/condition-spec/"
+        suffix: "."
+
+  docs_condition_spec:
+    heading: "Condition Spec"
+    intro: "Condition specs define what was tested and under which context. Well-defined specs enable reproducibility, comparison, and collaboration."
+    sections:
+      - type: h3
+        text: "Why it matters"
+      - type: p
+        text: "Results depend heavily on context. Even the same target can yield different outcomes depending on disease, cell type, or treatment conditions."
+      - type: h3
+        text: "Required fields"
+      - type: ul
+        items:
+          - "<code>dataset_id</code>: dataset or model identifier"
+          - "<code>mode</code>: simulation type (e.g., <code>knockdown</code>)"
+          - "<code>targets</code>: genes/proteins to perturb"
+          - "<code>condition</code>: condition label"
+      - type: h3
+        text: "Recommended metadata"
+      - type: ul
+        items:
+          - "Baseline name (control, untreated, etc.)"
+          - "Disease or cohort (ALS, NSCLC, responder, etc.)"
+          - "Cell or tissue type"
+          - "Timepoint"
+          - "Treatment/culture conditions"
+          - "Readouts (markers, rankings, summaries)"
+      - type: h3
+        text: "Example"
+      - type: pre
+        code: |
+          {
+            "dataset_id": "ds_als_motor_neuron_v1",
+            "mode": "knockdown",
+            "targets": ["GENE_A", "GENE_B"],
+            "condition": "sporadic_motor_neuron_d18"
+          }
+      - type: alert_next
+        mt5: true
+        prefix: "Next: Run simulations via "
+        link_label: "API"
+        url: "/docs/api/"
+        suffix: "."
+
+  docs_api:
+    heading: "API"
+    intro: "Use the API for automation, notebook integration, and scalable execution."
+    sections:
+      - type: h3
+        text: "Authentication"
+      - type: p_html
+        html: "<code>Authorization</code> header: <code>Bearer &lt;YOUR_API_KEY&gt;</code>"
+      - type: h3
+        text: "Endpoint"
+      - type: ul
+        items:
+          - "<code>POST /v1/simulations</code>: Run a simulation"
+      - type: h3
+        text: "Put simulation job"
+      - type: pre
+        code: |
+          curl -X POST "https://api.knockg.com/v1/simulations" \
+            -H "Authorization: Bearer <YOUR_API_KEY>" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "dataset_id": "ds_example_001",
+              "mode": "knockdown",
+              "targets": ["GENE_A", "GENE_B"],
+              "condition": "treated"
+              ...
+            }'
+      # - type: h3
+      #   text: "Response"
+      # - type: pre
+      #   code: |
+      #     {
+      #       "simulation_id": "sim_12345",
+      #       "status": "completed",
+      #       "summary": {
+      #         "top_candidates": ["GENE_A", "GENE_B"]
+      #       }
+      #     }
+      # - type: h3
+      #   text: "Web + API workflow"
+      # - type: p
+      #   text: "Explore in the web app, then scale with API for standardized and automated workflows."
+
+      - type: h3
+        text: "List available datasets"
+
+      - type: pre
+        code: |        
+          curl -X GET "https://api.knockg.com/v1/datasets?secret=<KNOCKG_API_SECRET>" \
+            -H "Accept: application/json"
+      
+      - type: h3
+        text: "List output genes for one screening"
+
+      - type: pre
+        code: |        
+          curl -X GET "https://api.knockg.com/v1/screenings/<SCREENING_ID>/output_genes?secret=<KNOCKG_API_SECRET>" \
+            -H "Accept: application/json"
+# value_props:
+#   heading: "Useful features"
+#   description: "Generate Omics Data without Experiments"
+#   items:
+#     - title: "Generate Time-Series Data"
+#       description: "Generate omics data at intermediate and future time points."
+#     - title: "Generate Knockdown/Activation Data"
+#       description: "Simulate knockdown/activation for targets for downstream analyses."
+#     - title: "Explore New Targets and Candidates"
+#       description: "Compare generated data to discover targets with literature/drug/patent info."
+
+# how_it_works:
+#   heading: "How it works"
+#   description: "A simple workflow to start quickly."
+#   steps:
+#     - title: "Sign up"
+#       description: "Create an account and access the platform."
+#     - title: "Run simulation"
+#       description: "Choose targets/conditions and generate omics predictions."
+#     - title: "Analyze & export"
+#       description: "Validate results and export for downstream research."
 
 features:
   section_title: "Useful features"
@@ -48,7 +519,6 @@ pricing:
       subtitle: "Per AI Model"
       description: "Payment available after review"
       features: "Full Feature Usage / De-Anonymization|Unlimited AI Model Usage|Multiple Knockdown Simulations|Patent Information Lookup|Target Anonymization Protection|Additional Analysis/Reports on Request"
-
 
 fun_facts:
   models_trained: "186+"

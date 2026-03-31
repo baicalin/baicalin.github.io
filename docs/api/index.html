@@ -1,0 +1,46 @@
+---
+layout: docs
+title: API
+description: Minimal API reference for KnockG MVP.
+doc_key: docs_api
+---
+
+{% include docs/DocPageRenderer.html doc_key=page.doc_key %}
+
+<!-- ---
+layout: docs
+lang: en
+title: API
+description: Minimal API reference for KnockG MVP.
+---
+
+<h1 class="mb-3">API</h1>
+<p class="mb-5">Use the API for repeatable, scriptable simulation runs.</p>
+
+<h3 class="mb-3">Authentication</h3>
+<p class="mb-4">Send an API key in the <code>Authorization</code> header as <code>Bearer &lt;YOUR_API_KEY&gt;</code>.</p>
+
+<h3 class="mb-3">Endpoint</h3>
+<ul class="mb-5">
+  <li><code>POST /v1/simulations</code>: create and run a simulation request.</li>
+</ul>
+
+<h3 class="mb-3">Minimal Request</h3>
+<pre><code>curl -X POST "https://api.knockg.com/v1/simulations" \
+  -H "Authorization: Bearer &lt;YOUR_API_KEY&gt;" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset_id": "ds_example_001",
+    "mode": "knockdown",
+    "targets": ["GENE_A", "GENE_B"],
+    "condition": "treated"
+  }'</code></pre>
+
+<h3 class="mb-3 mt-5">Response (shape)</h3>
+<pre><code>{
+  "simulation_id": "sim_12345",
+  "status": "completed",
+  "summary": {
+    "top_candidates": ["GENE_A", "GENE_B"]
+  }
+}</code></pre> -->

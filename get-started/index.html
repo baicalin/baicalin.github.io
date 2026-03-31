@@ -1,0 +1,14 @@
+---
+layout: marketing
+enable_channeltalk: true
+title: Get Started
+description: Quickstart guide for using KnockG via web app or API.
+sections:
+  - type: GetStartedHeroSection
+  - type: GetStartedQuickstartSection
+  - type: GetStartedWebVsApiSection
+  - type: GetStartedCodeSection
+---
+{% for section in page.sections %}
+  {% include components/SectionRenderer.html section=section %}
+{% endfor %}

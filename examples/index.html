@@ -1,0 +1,11 @@
+---
+layout: marketing
+enable_channeltalk: true
+title: Examples
+description: Practical KnockG example workflows.
+sections:
+  - type: ExamplesGallerySection
+---
+{% for section in page.sections %}
+  {% include components/SectionRenderer.html section=section %}
+{% endfor %}

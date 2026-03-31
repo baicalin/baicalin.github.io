@@ -1,0 +1,81 @@
+{% assign t = include.t | default: site.data[site.active_lang] %}
+
+{% assign key = page.example_key %}
+{% assign ex = nil %}
+
+{% if key and t.examples and t.examples[key] and t.examples[key].example_detail %}
+  {% assign ex = t.examples[key].example_detail %}
+{% else %}
+  {% assign ex = page.example_detail | default: t.example_detail %}
+{% endif %}
+
+{% assign labels = t.example_detail_labels %}
+
+{% if ex %}
+<section class="section-py mvp-example-detail">
+  <div class="container py-8">
+    {% if ex.eyebrow %}
+      <p class="text-uppercase text-primary fw-semibold mb-3">{{ ex.eyebrow }}</p>
+    {% endif %}
+
+    {% if ex.title %}
+      <h1 class="fw-bold mb-4">{{ ex.title }}</h1>
+    {% endif %}
+
+    {% if ex.summary %}
+      <p class="lead mb-6">{{ ex.summary }}</p>
+    {% endif %}
+
+    <div class="row g-6">
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-none border">
+          <div class="card-body p-6">
+            <h4 class="mb-3">{{ labels.problem | default: "Problem" }}</h4>
+            {% if ex.problem %}
+              <p class="mb-0">{{ ex.problem }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card h-100 shadow-none border">
+          <div class="card-body p-6">
+            <h4 class="mb-3">{{ labels.approach | default: "Approach" }}</h4>
+            {% if ex.approach_steps %}
+              <ol class="mb-0 ps-3">
+                {% for step in ex.approach_steps %}
+                  <li class="mb-2">{{ step }}</li>
+                {% endfor %}
+              </ol>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card shadow-none border">
+          <div class="card-body p-6">
+            <h4 class="mb-3">{{ labels.outcome | default: "Outcome" }}</h4>
+
+            {% if ex.outcomes %}
+              <ul class="mb-4 ps-3">
+                {% for item in ex.outcomes %}
+                  <li class="mb-2">{{ item }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+
+            {% if ex.next_cta and ex.next_cta.url and ex.next_cta.label %}
+              <a class="btn btn-primary" href="{{ ex.next_cta.url | relative_url }}">
+                {{ ex.next_cta.label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% assign lang = site.active_lang %}
+{% assign t = site.data[lang] %}
+<html
+  lang="{{ lang }}"
+  class="light-style layout-navbar-fixed layout-wide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="{{ '/assets/' | relative_url }}"
+  data-template="front-pages"
+  data-style="light">
+  <head>
+    {% include head.html mvp=true %}
+  </head>
+  <body>
+    <script src="{{ '/assets/vendor/js/dropdown-hover.js' | relative_url }}"></script>
+    <script src="{{ '/assets/vendor/js/mega-dropdown.js' | relative_url }}"></script>
+
+    {% include ui/HeaderNav.html %}
+
+    <main class="mvp-page marketing-page{% if page.url == '/' %} home-page{% endif %}" style="min-height: 100vh;">
+      {{ content }}
+    </main>
+
+    {% include ui/Footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>

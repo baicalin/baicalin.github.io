@@ -1,0 +1,103 @@
+{% assign lang = site.active_lang %}
+{% assign default_lang = site.default_lang | default: "en" %}
+{% assign t = site.data[lang] %}
+{% assign site_meta = site.data.site %}
+
+<nav class="layout-navbar container shadow-none py-0">
+  <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-4 px-md-8">
+    <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-6">
+      <button class="navbar-toggler border-0 px-0 me-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mvpNavbar"
+              aria-controls="mvpNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <i class="tf-icons ri-menu-fill ri-24px align-middle"></i>
+      </button>
+
+      <a href="{{ '/' | relative_url }}" class="app-brand-link">
+        <span class="app-brand-logo demo">
+          {% if site_meta.brand_logo %}
+            <img src="{{ site_meta.brand_logo | relative_url }}"
+                 style="width:auto; height:35px;"
+                 class="responsive-img"
+                 alt="{{ site_meta.brand_name | default: site.title }}" />
+          {% else %}
+            <span class="app-brand-text demo menu-text fw-semibold ms-2 ps-1">
+              {{ site_meta.brand_name | default: site.title }}
+            </span>
+          {% endif %}
+        </span>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse landing-nav-menu" id="mvpNavbar">
+      <ul class="navbar-nav me-auto p-4 p-lg-0">
+        {% for item in site.data.navigation.primary %}
+          {% assign item_url = item.url %}
+          {% assign is_active = false %}
+
+          {% if item_url == "/" %}
+            {% if page.url == "/" %}
+              {% assign is_active = true %}
+            {% elsif lang != default_lang and page.url == "/" | append: lang | append: "/" %}
+              {% assign is_active = true %}
+            {% endif %}
+          {% elsif page.url == item_url or page.url contains item_url %}
+            {% assign is_active = true %}
+          {% endif %}
+
+          <li class="nav-item">
+            <a class="nav-link fw-medium{% if is_active %} active{% endif %}"
+               href="{{ item_url | relative_url }}">
+              {{ t.nav[item.key] | default: item.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <ul class="navbar-nav flex-row align-items-center ms-auto">
+      {% if t and t.toggle %}
+        {% assign base_path = page.url %}
+
+        {% if lang != default_lang %}
+          {% assign prefix = "/" | append: lang %}
+          {% assign base_path = page.url | replace_first: prefix, "" %}
+          {% if base_path == "" %}
+            {% assign base_path = "/" %}
+          {% endif %}
+        {% endif %}
+
+        {% assign next_lang = "ko" %}
+        {% if lang == "ko" %}
+          {% assign next_lang = "en" %}
+        {% endif %}
+
+        {% assign toggle_href = base_path %}
+        {% if next_lang != default_lang %}
+          {% assign toggle_href = "/" | append: next_lang | append: base_path %}
+        {% endif %}
+
+        <li class="nav-item me-2 me-md-4">
+          <a class="nav-link fw-medium"
+             {% static_href %}href="{{ toggle_href | relative_url }}"{% endstatic_href %}>
+            {{ t.toggle }}
+          </a>
+        </li>
+      {% endif %}
+
+      {% if site_meta.cta_label %}
+        <li class="nav-item">
+          <a class="btn btn-primary px-2 px-sm-4"
+             href="{{ site_meta.cta_url | default: '#' }}"
+             target="_blank"
+             rel="noopener">
+            {{ site_meta.cta_label }}
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>

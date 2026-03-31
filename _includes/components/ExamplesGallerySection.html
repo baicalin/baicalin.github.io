@@ -1,0 +1,32 @@
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign gallery = page.examples_gallery | default: t.examples_gallery %}
+
+{% if gallery %}
+<section class="section-py mvp-examples-gallery">
+  <div class="container py-8">
+    {% if gallery.heading %}<h1 class="fw-bold mb-3">{{ gallery.heading }}</h1>{% endif %}
+    {% if gallery.description %}<p class="mb-6">{{ gallery.description }}</p>{% endif %}
+
+    {% if gallery.items %}
+    <div class="row g-6">
+      {% for item in gallery.items %}
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-none border">
+          {% if item.image %}
+          <img src="{{ item.image | relative_url }}" class="card-img-top" alt="{{ item.title }}" />
+          {% endif %}
+          <div class="card-body p-5">
+            {% if item.title %}<h4 class="mb-2">{{ item.title }}</h4>{% endif %}
+            {% if item.description %}<p class="mb-4">{{ item.description }}</p>{% endif %}
+            {% if item.url and item.cta_label %}
+            <a class="btn btn-outline-primary" href="{{ item.url | relative_url }}">{{ item.cta_label }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

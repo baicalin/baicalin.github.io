@@ -1,0 +1,26 @@
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign value_props = page.value_props | default: t.value_props %}
+
+<section class="section-py mvp-value-props bg-body">
+  <div class="container py-8">
+    {% if value_props.heading %}
+      <h2 class="fw-bold mb-3">{{ value_props.heading }}</h2>
+    {% endif %}
+    {% if value_props.description %}
+      <p class="text-body mb-6 mvp-value-props-description">{{ value_props.description }}</p>
+    {% endif %}
+
+    <div class="row g-6">
+      {% for item in value_props.items %}
+        <div class="col-md-4">
+          <div class="card h-100 shadow-none border">
+            <div class="card-body p-6 mvp-value-props-item-body">
+              <h5 class="mb-3">{{ item.title }}</h5>
+              <p class="mb-0">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

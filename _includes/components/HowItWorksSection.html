@@ -1,0 +1,27 @@
+{% assign t = include.t | default: site.data[site.active_lang] %}
+{% assign workflow = page.how_it_works | default: t.how_it_works %}
+
+<section class="section-py mvp-how-it-works">
+  <div class="container py-8">
+    {% if workflow.heading %}
+      <h2 class="fw-bold mb-3 mvp-how-it-works-heading">{{ workflow.heading }}</h2>
+    {% endif %}
+    {% if workflow.description %}
+      <p class="text-body mb-6">{{ workflow.description }}</p>
+    {% endif %}
+
+    <div class="row g-6">
+      {% for step in workflow.steps %}
+        <div class="col-md-4">
+          <div class="card h-100 shadow-none border">
+            <div class="card-body p-6">
+              <span class="badge bg-primary mb-3">Step {{ forloop.index }}</span>
+              <h5 class="mb-3">{{ step.title }}</h5>
+              <p class="mb-0 mvp-how-it-works-item-description">{{ step.description }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

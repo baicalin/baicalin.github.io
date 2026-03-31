@@ -1,0 +1,87 @@
+---
+layout: docs
+enable_channeltalk: true
+title: Docs
+description: KnockG documentation overview.
+---
+
+{% assign t = site.data[site.active_lang] %}
+{% assign doc = t.docs_overview %}
+
+{% if doc %}
+  <h1 class="mb-3">{{ doc.heading | default: "Documentation" }}</h1>
+
+  {% if doc.description %}
+    <p class="mb-6">{{ doc.description }}</p>
+  {% endif %}
+
+  {% if doc.cards %}
+    <div class="row g-4">
+      {% for item in doc.cards %}
+        <div class="col-md-6">
+          <a class="card h-100 shadow-none border text-decoration-none" href="{{ item.url | relative_url }}">
+            <div class="card-body p-5">
+              {% if item.title %}<h4 class="mb-2">{{ item.title }}</h4>{% endif %}
+              {% if item.summary %}<p class="mb-0 text-body">{{ item.summary }}</p>{% endif %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% else %}
+
+  <h1 class="mb-3">Documentation</h1>
+  <p class="mb-6">Docs overview is not configured yet.</p>
+  
+{% endif %}
+
+<!-- ---
+layout: docs
+lang: en
+enable_channeltalk: true
+title: Docs
+description: KnockG documentation overview.
+---
+
+<h1 class="mb-3">Documentation</h1>
+<p class="mb-6">Start with Getting Started, then move through Concepts, Condition Spec, and API for implementation details.</p>
+
+<div class="row g-4">
+  <div class="col-md-6">
+    <a class="card h-100 shadow-none border text-decoration-none" href="{{ '/docs/getting-started/' | relative_url }}">
+      <div class="card-body p-5">
+        <h4 class="mb-2">Getting Started</h4>
+        <p class="mb-0 text-body">First run checklist and workflow setup.</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-6">
+    <a class="card h-100 shadow-none border text-decoration-none" href="{{ '/docs/concepts/' | relative_url }}">
+      <div class="card-body p-5">
+        <h4 class="mb-2">Concepts</h4>
+        <p class="mb-0 text-body">Core ideas behind perturbation simulation.</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-6">
+    <a class="card h-100 shadow-none border text-decoration-none" href="{{ '/docs/condition-spec/' | relative_url }}">
+      <div class="card-body p-5">
+        <h4 class="mb-2">Condition Spec</h4>
+        <p class="mb-0 text-body">Define simulation inputs in a repeatable format.</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-6">
+    <a class="card h-100 shadow-none border text-decoration-none" href="{{ '/docs/api/' | relative_url }}">
+      <div class="card-body p-5">
+        <h4 class="mb-2">API</h4>
+        <p class="mb-0 text-body">Minimal endpoint overview and request examples.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+{% for section in page.sections %}
+  {% include components/SectionRenderer.html section=section %}
+{% endfor %} -->

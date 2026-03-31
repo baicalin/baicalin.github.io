@@ -1,0 +1,19 @@
+{% assign lang = site.active_lang %}
+{% assign t = site.data[lang] %}
+
+<footer class="landing-footer">
+  <div class="footer-bottom py-5">
+    <div class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
+      <div class="mb-2 mb-md-0">
+        <span class="footer-text">© {{ "now" | date: "%Y" }}, {{ site.data.site.brand_name | default: site.title }}</span>
+      </div>
+      <div class="d-flex gap-4 justify-content-center">
+        {% for link in site.data.navigation.footer %}
+          <a class="footer-link" href="{{ link.url | relative_url }}">
+            {{ t.nav[link.key] | default: link.label }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</footer>
