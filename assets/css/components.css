@@ -92,3 +92,144 @@
     padding-bottom: 1.25rem;
   }
 }
+
+/* ----------------------------------------
+   Hero Read More (Mobile)
+---------------------------------------- */
+@media (max-width: 991.98px) {
+  .mvp-readmore-wrap.is-collapsed [data-readmore-content] {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .mvp-readmore-wrap [data-readmore-toggle] {
+    white-space: nowrap;
+  }
+}
+
+/* ----------------------------------------
+   HeaderNav Mobile
+---------------------------------------- */
+@media (max-width: 991.98px) {
+  .layout-navbar .landing-navbar {
+    min-height: 64px;
+    flex-wrap: nowrap;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .layout-navbar .navbar-brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-right: 0 !important;
+  }
+
+  .layout-navbar .app-brand-link,
+  .layout-navbar .app-brand-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .layout-navbar .navbar-toggler {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .layout-navbar .landing-nav-menu {
+    width: min(320px, 84vw);
+  }
+
+  .layout-navbar .offcanvas-header {
+    padding: 1rem 1rem;
+  }
+
+  .layout-navbar .offcanvas-body {
+    padding: 0;
+  }
+
+  .layout-navbar .offcanvas-body .navbar-nav .nav-link {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .layout-navbar .landing-navbar {
+    align-items: center;
+  }
+
+  .layout-navbar .landing-nav-menu {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    visibility: visible !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    z-index: auto !important;
+    flex: 1 1 auto;
+  }
+
+  .layout-navbar .landing-nav-menu .offcanvas-header {
+    display: none !important;
+  }
+
+  .layout-navbar .landing-nav-menu .offcanvas-body {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .layout-navbar .landing-nav-menu .navbar-nav {
+    align-items: center;
+  }
+}
+
+/* ----------------------------------------
+   Header Brand Logo
+---------------------------------------- */
+.layout-navbar .app-brand-symbol {
+  width: auto;
+  height: 32px;
+  display: block;
+}
+
+.layout-navbar .app-brand-full {
+  width: auto;
+  height: 35px;
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .layout-navbar .app-brand-link,
+  .layout-navbar .app-brand-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .layout-navbar .navbar-brand {
+    flex: 0 0 auto;
+    margin-right: 0 !important;
+  }
+}
+
+/* ----------------------------------------
+   HeaderNav Offcanvas
+---------------------------------------- */
+@media (max-width: 991.98px) {
+  .layout-navbar .landing-nav-menu {
+    width: min(320px, 84vw);
+  }
+
+  .layout-navbar .landing-nav-menu .offcanvas-body {
+    padding: 0;
+  }
+}
