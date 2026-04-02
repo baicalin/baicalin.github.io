@@ -15,3 +15,58 @@
 {% if page.enable_channeltalk %}
   {% include ui/ChannelTalk.html %}
 {% endif %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileMq = window.matchMedia("(max-width: 991.98px)");
+    const blocks = document.querySelectorAll("[data-readmore]");
+
+    function updateReadmore(block) {
+      const content = block.querySelector("[data-readmore-content]");
+      const toggle = block.querySelector("[data-readmore-toggle]");
+      if (!content || !toggle) return;
+
+      if (!mobileMq.matches) {
+        block.classList.remove("is-collapsed");
+        toggle.classList.add("d-none");
+        toggle.textContent = "Read more";
+        toggle.setAttribute("aria-expanded", "true");
+        return;
+      }
+
+      block.classList.add("is-collapsed");
+
+      requestAnimationFrame(function () {
+        const isOverflowing = content.scrollHeight > content.clientHeight + 2;
+
+        if (!isOverflowing) {
+          block.classList.remove("is-collapsed");
+          toggle.classList.add("d-none");
+          toggle.setAttribute("aria-expanded", "true");
+          return;
+        }
+
+        toggle.classList.remove("d-none");
+        const collapsed = block.classList.contains("is-collapsed");
+        toggle.textContent = collapsed ? "Read more" : "Close";
+        toggle.setAttribute("aria-expanded", String(!collapsed));
+      });
+
+      if (toggle.dataset.bound === "true") return;
+
+      toggle.addEventListener("click", function () {
+        const collapsed = block.classList.toggle("is-collapsed");
+        toggle.textContent = collapsed ? "Read more" : "Close";
+        toggle.setAttribute("aria-expanded", String(!collapsed));
+      });
+
+      toggle.dataset.bound = "true";
+    }
+
+    blocks.forEach(updateReadmore);
+
+    window.addEventListener("resize", function () {
+      blocks.forEach(updateReadmore);
+    });
+  });
+</script>

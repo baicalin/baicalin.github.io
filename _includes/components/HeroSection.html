@@ -11,8 +11,25 @@
         {% if hero.title %}
           <h1 class="display-5 fw-bold mb-4">{{ hero.title }}</h1>
         {% endif %}
-        {% if hero.subtitle %}
+        
+        <!-- {% if hero.subtitle %}
           <p class="lead mb-5 mvp-hero-subtitle">{{ hero.subtitle }}</p>
+        {% endif %} -->
+
+        {% if hero.subtitle %}
+          <div class="mvp-readmore-wrap mb-5" data-readmore>
+            <p class="lead mb-0 mvp-hero-subtitle" data-readmore-content>
+              {{ hero.subtitle }}
+            </p>
+
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-primary mt-3 d-none"
+              data-readmore-toggle
+              aria-expanded="false">
+              Read more
+            </button>
+          </div>
         {% endif %}
 
         <div class="d-flex flex-wrap gap-3 mb-4">
