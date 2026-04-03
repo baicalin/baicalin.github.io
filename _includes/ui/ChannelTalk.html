@@ -3,34 +3,53 @@ ChannelTalk (Channel.io)
 - IMPORTANT: do not include ch-plugin-web.js anywhere else.
 {% endcomment %}
 
-{% assign current_lang = page.lang | default: site.default_lang | default: "en" %}
+{% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang | default: "en" %}
 {% assign plugin_key = site.data.site.channeltalk_plugin_key | default: "d0e8dc75-ef8e-46db-a7e5-ea87be6c0006" %}
 
 <script>
 (function () {
   var w = window;
-  if (w.ChannelIO) return;
-  var ch = function () { ch.c(arguments); };
-  ch.q = [];
-  ch.c = function (args) { ch.q.push(args); };
-  w.ChannelIO = ch;
+  var rawLang = "{{ current_lang | downcase }}";
+  var channelLang =
+    rawLang.indexOf("ko") === 0 ? "ko" :
+    rawLang.indexOf("ja") === 0 ? "ja" :
+    "en";
 
-  function load() {
-    if (w.ChannelIOInitialized) return;
-    w.ChannelIOInitialized = true;
-    var s = document.createElement("script");
-    s.async = true;
-    s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
-    document.head.appendChild(s);
+  function bootChannelTalk() {
+    w.ChannelIO('boot', {
+      pluginKey: "{{ plugin_key }}",
+      language: channelLang
+    }, function (error) {
+      if (error) return;
+
+      // 기존 사용자 언어도 현재 locale에 맞게 강제 동기화
+      w.ChannelIO('updateUser', {
+        language: channelLang
+      });
+    });
   }
 
-  if (document.readyState === "complete") load();
-  else window.addEventListener("load", load);
-})();
+  if (!w.ChannelIO) {
+    var ch = function () { ch.c(arguments); };
+    ch.q = [];
+    ch.c = function (args) { ch.q.push(args); };
+    w.ChannelIO = ch;
 
-// stub queue 덕분에 바로 boot 호출해도 됩니다.
-window.ChannelIO('boot', {
-  pluginKey: "{{ plugin_key }}",
-  language: "{{ current_lang }}"
-});
+    function load() {
+      if (w.ChannelIOInitialized) return;
+      w.ChannelIOInitialized = true;
+
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+      document.head.appendChild(s);
+    }
+
+    if (document.readyState === "complete") load();
+    else w.addEventListener("load", load);
+  }
+
+  // stub queue가 있으므로 바로 호출 가능
+  bootChannelTalk();
+})();
 </script>
